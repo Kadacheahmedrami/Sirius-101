@@ -1,11 +1,11 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
-
 function NavBar() {
   return (
     <nav className="navbar">
     <div className="logo" draggable="false">
-    <Image src={"/logo-full.png"} className="" height={80} width={80} alt="" />
+    <Image src={"/logo.svg"} className="" height={80} width={80} alt="" />
 
     </div>
     <ul className="nav-links">
