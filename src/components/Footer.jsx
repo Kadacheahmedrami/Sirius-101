@@ -15,7 +15,7 @@ function Footer() {
 </div>
 {/* 2 */}
    <div className='   flex flex-col  items-center   justify-center gap-2'> 
-   <Link href={""}  className='text-white   text-center mb-2   font-[600] text-2xl  '>
+   <Link href={""}  className='text-white   text-center mb-2   font-[400] text-2xl  '>
             About  Seruis
             </Link>
             <Link  className='text-white font-[600] text-2xl text-center ' href={""}>
@@ -49,7 +49,7 @@ function Footer() {
             </div>
         </div>
         </div>
-              <p className='text-center mt-4 py-4  text-darkgray text-2xl flex-grow-0'>2024 Siruis. All rights reserved.</p>
+              <p className='text-center  mt-4 py-4   text-darkgray text-2xl flex-grow-0'>2024 Siruis. All rights reserved.</p>
 
     </div>
 

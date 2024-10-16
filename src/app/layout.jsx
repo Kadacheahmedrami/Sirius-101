@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
     <html lang="en">
       <body className=" ">
-        <ClerkLoading>
+        {/* <ClerkLoading>
           <div className="flex items-center justify-center h-screen w-full">
           <Loader/>
           </div>
         </ClerkLoading>
-        <ClerkLoaded>
+        <ClerkLoaded> */}
 {/* <SignedIn>
 
     {redirect("./wlcm")}
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
 </SignedOut> */}
       {/* {children} */}
      {/* {redirect("./sign-in")} */}
-        </ClerkLoaded>
+        {/* </ClerkLoaded> */}
   
     {children}
       
