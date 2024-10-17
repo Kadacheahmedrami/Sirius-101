@@ -5,8 +5,8 @@ function NavBar() {
   return (
     <nav className="navbar">
     <div className="logo" draggable="false">
-    <Image src={"/logo-full.png"} className="" height={80} width={80} alt="" />
-
+    <Image src={"/logo.svg"} className="" height={48} width={48} alt="logo" />
+    <Image src={"/SIRIUS.svg"} className="" height={80} width={80} alt="logo1" />
     </div>
     <ul className="nav-links">
       <li><a href="#">About Sirius</a></li>
