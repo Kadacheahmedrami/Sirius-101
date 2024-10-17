@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.2",
+<<<<<<< HEAD
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.1",
+=======
+    "framer-motion": "^11.11.9",
+>>>>>>> 8e273b54bf7c61642f58ad12962944af3a427be8
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
