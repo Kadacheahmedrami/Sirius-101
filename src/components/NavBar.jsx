@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav className="navbar">
     <div className="logo" draggable="false">
-    <Image src={"/logo-full.png"} className="" height={80} width={80} alt="" />
+    <Image src={"/logo-full.png"} className="" height={90} width={90} alt="" />
 
     </div>
     <ul className="nav-links">

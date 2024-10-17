@@ -18,11 +18,11 @@ function Footer() {
    <Link href={""}  className='text-white   text-center mb-2   font-[400] text-2xl  '>
             About  Seruis
             </Link>
-            <Link  className='text-white font-[600] text-2xl text-center ' href={""}>
+            <Link  className='text-white font-[400] text-2xl text-center ' href={""}>
 
          Game details
             </Link>
-            <Link  className='text-white font-[600] text-2xl ' href={""}>
+            <Link  className='text-white font-[400] text-2xl ' href={""}>
       Hints
             </Link>
 

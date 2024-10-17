@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 const Welcome = () => {
   const { isLoaded, isSignedIn, user } = useUser();
 console.log(user)
-
   console.log(isSignedIn)
    if(!isSignedIn){
 redirect("./sign-up")

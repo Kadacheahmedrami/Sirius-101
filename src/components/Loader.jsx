@@ -2,7 +2,7 @@ import React from 'react'
 
 function Loader() {
   return (
-    <div>Loader ....</div>
+<div class="lds-ripple"><div></div><div></div></div>
   )
 }
 
