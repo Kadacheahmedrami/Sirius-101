@@ -24,13 +24,13 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
     <html lang="en">
       <body className=" ">
-      <ClerkLoading className="h-screen ">
-          <div className="flex  items-center justify-center h-full  w-full">
+      <ClerkLoading className=" ">
+          <div className="flex h-screen items-center justify-center  ">
           <Loader/>
           </div>
         </ClerkLoading>
         <ClerkLoaded >
-      {children}
+ 
        </ClerkLoaded>
   
     {children}
