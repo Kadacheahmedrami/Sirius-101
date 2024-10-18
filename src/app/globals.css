@@ -275,7 +275,7 @@ grid-template-columns: 50% 50%;
 
 .item2 {
   display: flex;
-  margin: 85px 0px;
+  margin: 125px 0px;
   align-items: center;
   grid-column: 2 / 3; /* 40% width container */
 }
