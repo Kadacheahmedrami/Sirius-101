@@ -1,25 +1,17 @@
-
+"use client"
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import NavBar from "../../components/NavBar"
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
 import MyForm from '../../components/MyForm'; 
-
 import WelcomeGame from "../../components/WelcomeGame";
-// import { redirect } from "next/navigation";
-
+import Script from "next/script";
 export default function Home() {
-
- 
-
-
-  
   const paragraph = "Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
   return (
 <>  
-      
-                <title>Sirius Game</title>
+ <title>Sirius Game</title>
                
       <NavBar/>
     
@@ -98,19 +90,43 @@ export default function Home() {
       <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
     </div>
     <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script>
+
+    <Script 
+        type="module" 
+        src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
+        strategy="afterInteractive" // This loads the script after the page becomes interactive
+      />
+      {/* <scrixpt type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
       <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
     </div>
     <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script>
+
+    <Script 
+        type="module" 
+        src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
+        strategy="afterInteractive" // This loads the script after the page becomes interactive
+      />
+      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
       <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
     </div>
     <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script>
+
+    <Script 
+        type="module" 
+        src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
+        strategy="afterInteractive" // This loads the script after the page becomes interactive
+      />
+      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
       <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
     </div>
     <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script>
+
+    <Script 
+        type="module" 
+        src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
+        strategy="afterInteractive" // This loads the script after the page becomes interactive
+      />
+      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
       <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
     </div>
   </div>
