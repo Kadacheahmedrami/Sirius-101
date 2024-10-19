@@ -66,6 +66,8 @@ export async function POST(req: Request) {
       photo: image_url!,
       firstName: first_name,
       lastName: last_name,
+      items : [0,0,0,0,0,0]
+      
     };
 
     console.log(user);
