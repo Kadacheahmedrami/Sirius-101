@@ -9,6 +9,8 @@ import WelcomeGame from "../../components/WelcomeGame";
 import Script from "next/script";
 
 export default function Home() {
+  console.log("MongoDB URI:", process.env.MONGODB_URI);
+console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
   const paragraph = "Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
   return (
 <>  

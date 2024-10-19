@@ -7,15 +7,15 @@ const Welcome = () => {
   const { isLoaded, isSignedIn, user } = useUser();
 console.log(user)
   console.log(isSignedIn)
-   if(!isSignedIn){
-redirect("./sign-up")
- }else{
+//    if(!isSignedIn){
+// redirect("./sign-up")
+//  }else{
     redirect("./wlcm")
 
  }
 
 
-};
+// };
 
 export default Welcome;
 
