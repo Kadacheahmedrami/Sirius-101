@@ -188,14 +188,52 @@ img
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
- 
 }
 
-.spline-card:hover {
+.play {
+  /* Add this line to make sure the pseudo-element is rendered */
+  height: 20%; /* Set to 100% to cover the entire card */
+  width: 100%;
+  background-color: #e6e6e6;
+  
+  color: black;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
+
+
+}
+
+
+.spline-card:hover .play   {
+  
+  background-color: #000000;
+  color :white;
+  border: 5px solid black;
+  box-shadow: 5px 5px 20px 10px rgb(0,0,0,0.6);
+  animation: slideup 0.4s infinite ease-in;
+}
+
+.spline-card:hover  {
   transform: rotate(2deg) scale(1.05);
-  border: 5px solid #7939ff;
-  box-shadow: 5px 5px 20px 10px rgb(127, 17, 224,0.6);
+  border: 5px solid black;
+  box-shadow: 5px 5px 20px 10px rgb(0,0,0,0.6);
   animation: jiggle 0.4s infinite ease-in;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%); /* Start below the visible area */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(100%); /* End at its original position */
+    opacity: 1; /* End fully visible */
+  }
 }
 
 @keyframes jiggle {
