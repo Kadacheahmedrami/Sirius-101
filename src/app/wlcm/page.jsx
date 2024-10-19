@@ -23,6 +23,40 @@ export default function Home() {
 
       <div className="grid-container">
        
+      <div className="grid-item item1 flex flex-col gap-[10px] justify-center items-center">
+        <p className="text-[23px] font-[700] text-[#7939FF] leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full">
+          Welcome Game
+        </p>
+        <h1 className="text-[32px] md:text-[58px] font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full">
+          Find the hidden items and <br className="hidden lg:block" /> win prizes on Welcome Day
+        </h1>
+        <p className="text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
+          Siruis is a science club located in Amizour Bejaia formed by a bunch of students from ESTIN to help other students learn about hardware.
+        </p>
+      </div>
+
+      <div className="grid-item item2 h-[500px] justify-end" draggable="false">
+        <Image className="cursor-pointer relative left-16" src={'/robot.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
+      </div>
+
+      <div className="hidden md:block animate h-[200px] w-full">
+        <Image className="ml-[67%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 1" />
+        <Image className="ml-[60%] rotate-[210deg] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 2" />
+        <Image className="ml-[62%] mt-[1%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 3" />
+      </div>
+
+      <div className="grid-item item3 flex flex-row overflow-hidden justify-center items-center gap-[37%] relative">
+        <Image alt="Right" src={'/right.svg'} width={600} height={300}  className='mr-auto'/>
+        <Image className="ml-[1000px] md:block absolute md:ml-[0%] mb-[19%] lg:mb-[10%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 1" />
+        <Image className="ml-[1000px] md:block absolute md:ml-[0%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 2" />
+        <Image className="ml-[1000px] md:block absolute md:ml-[-20%] lg:ml-[-15%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 3" />
+        <Image className="ml-[1000px] md:block absolute md:ml-[-15%] mb-[-15%] lg:mb-[-10%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 4" />
+        <div className="text-[32px] md:text-[40px] font-[700] text-[#ffffff] leading-[56.88px] flex flex-row absolute gap-3">
+          About  <Image src={'SIRIUS.svg'} height={150} width={130}></Image>
+        </div>
+        <Image alt="Left" src={'/left.svg'}  className='ml-auto' width={600} height={300} />
+      </div>
+
         <WelcomeGame></WelcomeGame>
 
       
@@ -86,38 +120,38 @@ export default function Home() {
 
 <div className="grid-item item8 flex justify-center">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-      
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+          <div className="play">Play</div>
  
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+      <div className="play">Play</div>
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+      <div className="play">Play</div>
  
       {/* <scrixpt type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+      <div className="play">Play</div>
   
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+      <div className="play">Play</div>
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
-    <div className="spline-card h-[400px] w-full bg-white border-4 border-black rounded flex items-center justify-center">
-
+    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
+      <div className="play">Play</div>
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" camera-controls="zoom: false"></spline-viewer>
+      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
     </div>
   </div>
 </div>
