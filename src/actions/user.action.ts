@@ -5,7 +5,8 @@ import { connect } from "../db";
 export async function createUser(user: any) {
   try {
     await connect();
-    const newUser = await User.create(user);
+    const newUsernotsaved = await User.create(user);
+    const newUser = newUsernotsaved.save()
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
     console.log(error);
