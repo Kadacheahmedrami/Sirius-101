@@ -5,11 +5,7 @@ import Image from 'next/image'; // Ensure you have the right import for your ima
 const MyForm = () => {
   return (
     <form className="grid grid-cols-2 gap-4 w-[1000px]">
-      <CustomInput type="text" placeholder="First Name" />
-      <CustomInput type="text" placeholder="Last Name" />
-      <CustomInput type="text" placeholder="Number" />
-      <CustomInput type="email" placeholder="Email" />
-
+    
       <div className="col-span-2 w-full h-[400px] flex justify-center items-center border-2 border-black border-opacity-40 rounded-xl bg-white relative">
         <input
           type="file"
