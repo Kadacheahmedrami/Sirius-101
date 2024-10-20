@@ -6,11 +6,15 @@ import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 import Loader from "../../components/Loader"
 export default function Home() {
-  const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
-  const [items, setItems] = useState([]); // Use state to store items
+  // const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
+  // const [items, setItems] = useState([]); // Use state to store items
   const {user,isLoaded,isSignedIn} =  useUser();
-  console.log("user : ")
-  console.log(user)
+  // console.log("user : ")
+  // console.log(user)
+
+
+
+
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [isCorrect, setIsCorrect] = useState(false); // Check if the answer is correct
@@ -48,14 +52,14 @@ export default function Home() {
   };
 
 
-  useEffect(() => {
-    if (isLoaded && isSignedIn) {
-      setClerkId(user.id); // Use user.id to get the Clerk ID
-      setItems(user.items); // Assuming user.items exists
-      console.log(clerkId)
-      console.log(user.items);
-    }
-  }, [isLoaded, isSignedIn, user]);
+  // useEffect(() => {
+  //   if (isLoaded && isSignedIn) {
+  //     setClerkId(user.id); // Use user.id to get the Clerk ID
+  //     setItems(user.items); // Assuming user.items exists
+  //     console.log(clerkId)
+  //     console.log(user.items);
+  //   }
+  // }, [isLoaded, isSignedIn, user]);
 
 
 
@@ -171,7 +175,7 @@ export default function Home() {
                 } }
               />
             ))}
-            <button className='bg-green-600 w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
+            <button className='bg-green-600 w-[400px] h-[400px] '  onClick={()=>{updateItems(user.clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
 }}>
            <h1 className='text-3xl '>   change the items bro</h1>
             </button>
