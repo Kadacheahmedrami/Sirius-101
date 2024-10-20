@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkLoaded, ClerkLoading, ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton, UserProfile } from '@clerk/nextjs'
-import { redirect } from "next/navigation";
 import Loader from "../components/Loader"
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
