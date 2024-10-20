@@ -35,7 +35,8 @@ export default function Home() {
 
 
   
- const {clerkId , items}  = user ;
+ const clerkId   = user.clerkId ;
+ const items = user.items ; 
 
 
 

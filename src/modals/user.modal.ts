@@ -26,7 +26,7 @@ const userShema = new Schema({
     },
     items : {
         type:   Array ,
-        default : []
+        default : [0,0,0,0,0,0]
     }
 
 })
