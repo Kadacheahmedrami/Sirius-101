@@ -53,8 +53,8 @@ export default function Home() {
 
 
   
-
-  
+console.log(items)
+console.log(user)
 
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
