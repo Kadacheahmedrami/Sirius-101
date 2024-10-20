@@ -15,13 +15,13 @@ export default function Home() {
     if (isLoaded && isSignedIn) {
       setClerkId(user.id); // Use user.id to get the Clerk ID
       setItems(user.items); // Assuming user.items exists
-      console.log(user.id);
+      console.log(clerkId)
       console.log(user.items);
     }
   }, [isLoaded, isSignedIn, user]);
 
   if(isLoaded){
-  <Loader/>
+ return <Loader/>
   }
 
 
@@ -51,10 +51,8 @@ export default function Home() {
   };
  
 
-
-  
-console.log(items)
-console.log(user)
+console.log("user : ")
+  console.log(user)
 
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
