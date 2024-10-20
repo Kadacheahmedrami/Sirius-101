@@ -11,7 +11,11 @@ export default function Home() {
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
 
+  console.log("mongodb url ")
+  console.log(process.env.NEXT_PUBLIC_MONGODB_URL)
+  console.log("Secri key : ")
 
+  console.log(NEXT_PUBLIC_WEBHOOK_SECRET)
 
       // <NavBar/>
 
