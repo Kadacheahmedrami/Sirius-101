@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     if (isLoaded && isSignedIn) {
       setClerkId(user.id); // Use user.id to get the Clerk ID
-      setItems(user.items || []); // Assuming user.items exists
+      setItems(user.items); // Assuming user.items exists
       console.log(user.id);
       console.log(user.items);
     }
@@ -26,7 +26,7 @@ export default function Home() {
 
 
  
-  const updateItems = async (clerkid, updatedItems) => {
+  const updateItems = async (clerkId, updatedItems) => {
     try {
       const response = await fetch('/api/updateItems', {
         method: 'PUT',
@@ -34,7 +34,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          clerkid,      // Clerk ID of the user
+          clerkId,      // Clerk ID of the user
           items: updatedItems  // New items array
         }),
       });
