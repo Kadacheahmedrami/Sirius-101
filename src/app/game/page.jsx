@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState ,useEffect } from 'react';
 import Image from "next/image";
 import QuizItem from "../../components/QuizItem";
 import Script from "next/script";
@@ -8,27 +8,20 @@ import Loader from "../../components/Loader"
 export default function Home() {
   const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
   const [items, setItems] = useState([]); // Use state to store items
-
+  const {user,isLoaded,isSignedIn} =  useUser();
 
 
   useEffect(() => {
     if (isLoaded && isSignedIn) {
       setClerkId(user.id); // Use user.id to get the Clerk ID
-      setItems(user.items); // Assuming user.items exists
+      setItems(user.items || []); // Assuming user.items exists
       console.log(user.id);
       console.log(user.items);
     }
   }, [isLoaded, isSignedIn, user]);
-  const {user,isLoaded,isSignedIn} =  useUser();
-  if(isLoaded){
 
+  if(isLoaded){
   <Loader/>
-  }
-  else{
-    clerkId = user.clerkId ;
-    items = user.items ;
-    console.log(clerkId)
-    console.log(items)
   }
 
 
