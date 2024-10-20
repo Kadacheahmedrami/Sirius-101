@@ -4,48 +4,52 @@ import Image from "next/image";
 import QuizItem from "../../components/QuizItem";
 import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
-import { redirect } from 'next/navigation';
-
+import Loader from "../../components/Loader"
 export default function Home() {
+ const clerkId = null ;
+ const items = []
+  const {user,isLoaded,isSignedIn} =  useUser();
+  if(isLoaded && isSignedIn){
 
-  const {user} =  useUser();
-  if(!user){
-    redirect("./sign-up")
+  <Loader/>
   }
-  const clerkId = user.clerkId ;
-  const items = user.items ; 
- console.log(clerkId)
- console.log(items)
+  else{
+    clerkId = user.clerkId ;
+    items = user.items ;
+    console.log(clerkId)
+    console.log(items)
+  }
+
+
  
-  // const updateItems = async (clerkid, updatedItems) => {
-  //   try {
-  //     const response = await fetch('/api/updateItems', {
-  //       method: 'PUT',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         clerkid,      // Clerk ID of the user
-  //         items: updatedItems  // New items array
-  //       }),
-  //     });
+  const updateItems = async (clerkid, updatedItems) => {
+    try {
+      const response = await fetch('/api/updateItems', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clerkid,      // Clerk ID of the user
+          items: updatedItems  // New items array
+        }),
+      });
   
-  //     if (response.ok) {
-  //       const result = await response.json();
-  //       console.log('Items updated:', result);
-  //     } else {
-  //       console.error('Failed to update items:', response.statusText);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error sending PUT request:', error);
-  //   }
-  // };
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Items updated:', result);
+      } else {
+        console.error('Failed to update items:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending PUT request:', error);
+    }
+  };
  
 
 
   
 
-  // updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
   
 
   const [step, setStep] = useState(1); // Track the current step
@@ -172,6 +176,10 @@ export default function Home() {
                 } }
               />
             ))}
+            <button className='bg-green w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
+}}>
+           <h1 className='text-3xl '>   change the items bro</h1>
+            </button>
             <button
               onClick={ show }
               className='z-[2] w-[100%] h-[51px] rounded-[100px] bg-[#AB0ABD] text-white text-[22px] font-[700] flex justify-center items-center'>
