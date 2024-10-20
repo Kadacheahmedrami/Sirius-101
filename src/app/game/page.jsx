@@ -1,60 +1,26 @@
 'use client'
-import { useState } from 'react';
+import { useState ,useEffect } from 'react';
 import Image from "next/image";
 import QuizItem from "../../components/QuizItem";
 import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
-
+import Loader from "../../components/Loader"
 export default function Home() {
-
-  const { isLoaded, isSignedIn, user } = useUser();
-  const updateItems = async (clerkId, updatedItems) => {
-    try {
-      const response = await fetch('/api/updateItems', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          clerkId,      // Clerk ID of the user
-          items: updatedItems  // New items array
-        }),
-      });
-  
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Items updated:', result);
-      } else {
-        console.error('Failed to update items:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error sending PUT request:', error);
-    }
-  };
+  // const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
+  // const [items, setItems] = useState([]); // Use state to store items
+  const {user,isLoaded,isSignedIn} =  useUser();
+  // console.log("user : ")
+  // console.log(user)
 
 
 
-  
- const clerkId   = user.clerkId ;
- const items = user.items ; 
-
-
-
-  updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
-  
 
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [isCorrect, setIsCorrect] = useState(false); // Check if the answer is correct
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
-
-
- 
-
-
   const Hints = ['First', 'Second' ,'Third'];
-
   const quizData = {
     1: {
       question: "What is the capital of France?",
@@ -84,6 +50,45 @@ export default function Home() {
       ]
     }
   };
+
+
+  // useEffect(() => {
+  //   if (isLoaded && isSignedIn) {
+  //     setClerkId(user.id); // Use user.id to get the Clerk ID
+  //     setItems(user.items); // Assuming user.items exists
+  //     console.log(clerkId)
+  //     console.log(user.items);
+  //   }
+  // }, [isLoaded, isSignedIn, user]);
+
+
+
+ 
+  const updateItems = async (clkId, updatedItems) => {
+    try {
+      const response = await fetch('/api/updateItems', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clerkId : clkId,      // Clerk ID of the user
+          items: updatedItems  // New items array
+        }),
+      });
+  
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Items updated:', result);
+      } else {
+        console.error('Failed to update items:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending PUT request:', error);
+    }
+  };
+ 
+
 
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
@@ -124,7 +129,9 @@ export default function Home() {
   const closeHint = () => {
     setShowHint(false);
   };
-
+  if(isLoaded){
+    return <Loader/>
+     }
   return (
     <>
 
@@ -149,11 +156,7 @@ export default function Home() {
            
 
       <div className={` w-[100%] lg:w-[60%] mt-10   ${showHint ? 'blur-sm' : ''}`}>
-      <button
-                onClick={()=>updateItems(clerkId, [1, 2, 3, 4, 5, 6])}
-                className="bg-black font-[700] rounded-[10px] flex justify-center items-center text-[20px] text-white w-[100%] px-4 py-2 ">
-                Change Me if u can 
-              </button>
+
         <h1 className="text-[58px] hidden lg:block font-bold text-center">The Game</h1>
 
         {/* Quiz Content */}
@@ -172,6 +175,10 @@ export default function Home() {
                 } }
               />
             ))}
+            <button className='bg-green-600 w-[400px] h-[400px] '  onClick={()=>{updateItems(user.clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
+}}>
+           <h1 className='text-3xl '>   change the items bro</h1>
+            </button>
             <button
               onClick={ show }
               className='z-[2] w-[100%] h-[51px] rounded-[100px] bg-[#AB0ABD] text-white text-[22px] font-[700] flex justify-center items-center'>

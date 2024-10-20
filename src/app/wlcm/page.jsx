@@ -9,15 +9,21 @@ import Game from "../../components/Game";
 import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 88d94d556f4796d2c70d6fe90c277db34a768703
 
 
 export default function Home() {
 
+<<<<<<< HEAD
 
   let games = [0,1,0,0,1,0];
 
+=======
+>>>>>>> 88d94d556f4796d2c70d6fe90c277db34a768703
    return (
 <>  
  <title>Sirius Game</title>
