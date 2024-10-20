@@ -18,10 +18,10 @@ const userShema = new Schema({
         type:   String ,
         required: true ,
     },
-    items : {
-        type:   Array ,
-        default : [0,0,0,0,0,0]
-    }
+    // items : {
+    //     type:   Array ,
+    //     default : []
+    // }
 
 })
 
