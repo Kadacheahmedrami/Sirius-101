@@ -4,10 +4,14 @@ import Image from "next/image";
 import QuizItem from "../../components/QuizItem";
 import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
+import { redirect } from 'next/navigation';
 
 export default function Home() {
 
-  const {user} = useUser();
+  const {user} =  useUser();
+  if(!user){
+    redirect("./sign-up")
+  }
   const clerkId = user.clerkId ;
   const items = user.items ; 
  console.log(clerkId)
@@ -36,7 +40,7 @@ export default function Home() {
       console.error('Error sending PUT request:', error);
     }
   };
-
+ 
 
 
   
