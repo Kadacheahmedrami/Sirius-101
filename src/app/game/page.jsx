@@ -6,10 +6,21 @@ import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 import Loader from "../../components/Loader"
 export default function Home() {
- let clerkId = null ;
- let items = []
+  const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
+  const [items, setItems] = useState([]); // Use state to store items
+
+
+
+  useEffect(() => {
+    if (isLoaded && isSignedIn) {
+      setClerkId(user.id); // Use user.id to get the Clerk ID
+      setItems(user.items); // Assuming user.items exists
+      console.log(user.id);
+      console.log(user.items);
+    }
+  }, [isLoaded, isSignedIn, user]);
   const {user,isLoaded,isSignedIn} =  useUser();
-  if(isLoaded && isSignedIn){
+  if(isLoaded){
 
   <Loader/>
   }
