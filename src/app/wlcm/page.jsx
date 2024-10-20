@@ -13,7 +13,7 @@ export default function Home() {
   console.log(process.env.NEXT_PUBLIC_MONGODB_URL)
   console.log("Secri key : ")
 
-  console.log(NEXT_PUBLIC_WEBHOOK_SECRET)
+  console.log(process.env.NEXT_PUBLIC_WEBHOOK_SECRET)
 
  const paragraph = "Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
   return (
