@@ -21,36 +21,100 @@ export default function Home() {
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
   const Hints = ['First', 'Second' ,'Third'];
-  const quizData = {
-    1: {
-      question: "What is the capital of France?",
-      answers: [
-        { id: 1, text: "Berlin", isCorrect: false },
-        { id: 2, text: "Paris", isCorrect: true },
-        { id: 3, text: "Madrid", isCorrect: false },
-        { id: 4, text: "chads", isCorrect: false }
-      ]
-    },
-    2: {
-      question: "Which planet is known as the Red Planet?",
-      answers: [
-        { id: 1, text: "Earth", isCorrect: false },
-        { id: 2, text: "Mars", isCorrect: true },
-        { id: 3, text: "Jupiter", isCorrect: false },
-        { id: 4, text: "Nadine", isCorrect: false }
-      ]
-    },
-    3: {
-      question: "What is the largest mammal?",
-      answers: [
-        { id: 1, text: "Elephant", isCorrect: false },
-        { id: 2, text: "Blue Whale", isCorrect: true },
-        { id: 3, text: "Giraffe", isCorrect: false },
-        { id: 4, text: "younes", isCorrect: false }
-      ]
-    }
-  };
 
+  const quizes = [
+    {
+      1: {
+        question: "In the world of binary, we deal with ones and zeros. What is the decimal value of the binary number 10001?",
+        answers: [
+          { id: 1, text: "15", isCorrect: false },
+          { id: 2, text: "17", isCorrect: true },
+          { id: 3, text: "19", isCorrect: false },
+          { id: 4, text: "21", isCorrect: false }
+        ]
+      },
+      2: {
+        question: "What is the world’s first computer virus called?",
+        answers: [
+          { id: 1, text: "Creeper", isCorrect: true },
+          { id: 2, text: "ILOVEYOU", isCorrect: false },
+          { id: 3, text: "MyDoom", isCorrect: false },
+          { id: 4, text: "Code Red", isCorrect: false }
+        ]
+      },
+      3: {
+        question: "If you were to text 'SOS' in Morse code, what would it look like?",
+        answers: [
+          { id: 1, text: "... --- ...", isCorrect: true },
+          { id: 2, text: "- - - ...", isCorrect: false },
+          { id: 3, text: "... --- .", isCorrect: false },
+          { id: 4, text: ". . - - .", isCorrect: false }
+        ]
+      }
+    },
+    {
+      1: {
+        question: "What tech company was the first to introduce electric cars to the mainstream market?",
+        answers: [
+          { id: 1, text: "Tesla", isCorrect: true },
+          { id: 2, text: "Ford", isCorrect: false },
+          { id: 3, text: "Toyota", isCorrect: false },
+          { id: 4, text: "BMW", isCorrect: false }
+        ]
+      },
+      2: {
+        question: "Which of the following is a popular framework for building web applications in JavaScript?",
+        answers: [
+          { id: 1, text: "Flask", isCorrect: false },
+          { id: 2, text: "Django", isCorrect: false },
+          { id: 3, text: "Angular", isCorrect: true },
+          { id: 4, text: "Ruby on Rails", isCorrect: false }
+        ]
+      },
+      3: {
+        question: "In tech terms, what does 'URL' stand for?",
+        answers: [
+          { id: 1, text: "Uniform Resource Locator", isCorrect: true },
+          { id: 2, text: "Universal Reference Link", isCorrect: false },
+          { id: 3, text: "Uniform Reference Locator", isCorrect: false },
+          { id: 4, text: "Universal Resource Link", isCorrect: false }
+        ]
+      }
+    },
+    {
+      1: {
+        question: "Which computer hardware component is known as the 'brain' of the computer?",
+        answers: [
+          { id: 1, text: "GPU", isCorrect: false },
+          { id: 2, text: "Hard Drive", isCorrect: false },
+          { id: 3, text: "CPU (Central Processing Unit)", isCorrect: true },
+          { id: 4, text: "RAM", isCorrect: false }
+        ]
+      },
+      2: {
+        question: "Which programming language is primarily used for iOS app development?",
+        answers: [
+          { id: 1, text: "Java", isCorrect: false },
+          { id: 2, text: "Swift", isCorrect: true },
+          { id: 3, text: "Python", isCorrect: false },
+          { id: 4, text: "Kotlin", isCorrect: false }
+        ]
+      },
+      3: {
+        question: "What does RAM stand for?",
+        answers: [
+          { id: 1, text: "Read Access Memory", isCorrect: false },
+          { id: 2, text: "Random Access Memory", isCorrect: true },
+          { id: 3, text: "Read Allocation Memory", isCorrect: false },
+          { id: 4, text: "Random Allocation Memory", isCorrect: false }
+        ]
+      }
+    }
+  ];
+  
+
+
+  const quizData = quizes[0]
 
   // useEffect(() => {
   //   if (isLoaded && isSignedIn) {
@@ -129,9 +193,9 @@ export default function Home() {
   const closeHint = () => {
     setShowHint(false);
   };
-  if(isLoaded){
-    return <Loader/>
-     }
+  // if(isLoaded){
+  //   return <Loader/>
+  //    }
   return (
     <>
 
