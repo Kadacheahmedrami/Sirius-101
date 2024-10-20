@@ -6,6 +6,9 @@ import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 import Loader from "../../components/Loader"
 export default function Home() {
+
+
+
   const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
   const [items, setItems] = useState([]); // Use state to store items
   const {user,isLoaded,isSignedIn} =  useUser();
@@ -26,7 +29,7 @@ export default function Home() {
 
 
  
-  const updateItems = async (clerkId, updatedItems) => {
+  const updateItems = async (clkId, updatedItems) => {
     try {
       const response = await fetch('/api/updateItems', {
         method: 'PUT',
@@ -34,7 +37,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          clerkId,      // Clerk ID of the user
+          clerkId : clkId,      // Clerk ID of the user
           items: updatedItems  // New items array
         }),
       });
@@ -50,17 +53,13 @@ export default function Home() {
     }
   };
  
-
 console.log("user : ")
   console.log(user)
-
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [isCorrect, setIsCorrect] = useState(false); // Check if the answer is correct
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
-
-
  
 
   const Hints = ['First', 'Second' ,'Third'];
