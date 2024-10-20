@@ -5,8 +5,10 @@ import { useUser } from "@clerk/nextjs";
 
 const Welcome = () => {
   const { isLoaded, isSignedIn, user } = useUser();
-console.log(user)
-  console.log(isSignedIn)
+
+  console.log("mongodb url ")
+  console.log(process.env.NEXT_PUBLIC_MONGODB_URL)
+
    if(!isSignedIn){
 redirect("./sign-up")
  }else{
