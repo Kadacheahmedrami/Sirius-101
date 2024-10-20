@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function QuizItem({id,text, isSelected, onClick}) {
   const lettres = ['A','B','C','D']
 
@@ -23,6 +24,7 @@ function QuizItem({id,text, isSelected, onClick}) {
       
     </button>
   );
+
 }
 
 export default QuizItem

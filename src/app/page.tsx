@@ -5,32 +5,19 @@ import { useUser } from "@clerk/nextjs";
 
 const Welcome = () => {
   const { isLoaded, isSignedIn, user } = useUser();
-console.log(user)
-  console.log(isSignedIn)
-//    if(!isSignedIn){
-// redirect("./sign-up")
-//  }else{
+
+  console.log("mongodb url ")
+  console.log(process.env.NEXT_PUBLIC_MONGODB_URL)
+
+   if(!isSignedIn){
+redirect("./sign-up")
+ }else{
     redirect("./wlcm")
 
  }
 
 
-// };
+};
 
 export default Welcome;
 
-// const Welcome = () => {
-//   // const { isLoaded, isSignedIn, user } = useUser();
-//   const { userId }: { userId: string | null } = auth()
-
-//    if(!userId){
-// redirect("./sign-up")
-//  }else{
-//     redirect("./wlcm")
-
-//  }
-
-
-// };
-
-// export default Welcome;

@@ -14,13 +14,19 @@ const userShema = new Schema({
         type:   String ,
         required: true ,
     },
+    firstName : {
+        type:   String ,
+    },
+    lastName: {
+        type:   String ,
+    },
    photo: {
         type:   String ,
         required: true ,
     },
     items : {
         type:   Array ,
-        default : [0,0,0,0,0,0]
+        default : []
     }
 
 })
@@ -28,3 +34,4 @@ const userShema = new Schema({
 const User = models.User || model("User",userShema)
 
 export default User 
+
