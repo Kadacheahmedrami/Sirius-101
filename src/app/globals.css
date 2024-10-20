@@ -411,6 +411,10 @@ grid-template-columns: 50% 50%;
   }
 
   .grid-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
       grid-template-columns: 1fr; /* One column, all items will take full width */
     }
   .item1 , .item9{
