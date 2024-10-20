@@ -5,16 +5,19 @@ function NavBar() {
   return (
     <nav className="navbar">
     <div className="logo" draggable="false">
-
-    <Image src={"/logo.svg"} className="" height={48} width={48} alt="logo" />
+      <a href='/wlcm' className='flex justify-center items-center gap-2'>
+      <Image src={"/logo.svg"} className="" height={48} width={48} alt="logo" />
     <Image src={"/SIRIUS.svg"} className="" height={80} width={80} alt="logo1" />
+      </a>
+   
     </div>
     <ul className="nav-links">
-      <li><a href="#">About Sirius</a></li>
-      <li><a href="#">Game details</a></li>
-      <li><a href="#">Hints</a></li>
+      <li><a className='linea' href="#about">About Sirius</a></li>
+      <li><a className='linea'  href="#Details">Game details</a></li>
+  
       <div>
-        <button className="button">I found item</button>
+       
+     <a href="#game"><button  className="button">  I found item</button></a>  
       </div>
     </ul>
     <div className="hamburger">

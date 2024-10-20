@@ -1,11 +1,12 @@
 "use client"
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
-import NavBar from "../../components/NavBar"
+
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
 import MyForm from '../../components/MyForm'; 
 import WelcomeGame from "../../components/WelcomeGame";
+import Game from "../../components/Game";
 import Script from "next/script";
 
 export default function Home() {
@@ -16,7 +17,7 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
 <>  
  <title>Sirius Game</title>
                
-      <NavBar/>
+    
       <Script 
         type="module" 
         src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
@@ -25,7 +26,7 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
 
       <div className="grid-container">
        
-      <div className="grid-item item1 flex flex-col gap-[10px] justify-center items-center">
+      <div className=" grid-item item1 flex flex-col gap-[10px] justify-center items-center">
         <p className="text-[23px] font-[700] text-[#7939FF] leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full">
           Welcome Game
         </p>
@@ -35,9 +36,21 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
         <p className="text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
           Siruis is a science club located in Amizour Bejaia formed by a bunch of students from ESTIN to help other students learn about hardware.
         </p>
+
+      <div className="mx-auto md:mx-0">
+      <a href="#start" className="mx-auto">
+          <button className="cool-button  md:w-[720px] h-[74px] my-5 ">
+            Start Playing
+          </button>
+        </a>
       </div>
 
-      <div className="grid-item item2 h-[500px] justify-end" draggable="false">
+     
+      
+      </div>
+
+
+      <div   className="grid-item item2 h-[500px] justify-end" draggable="false">
         <Image className="cursor-pointer relative left-16" src={'/robot.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
       </div>
 
@@ -47,7 +60,7 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
         <Image className="ml-[62%] mt-[1%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 3" />
       </div>
 
-      <div className="grid-item item3 flex flex-row overflow-hidden justify-center items-center gap-[37%] relative">
+      <div id='about' className="grid-item item3 flex flex-row overflow-hidden justify-center items-center gap-[37%] relative">
         <Image alt="Right" src={'/right.svg'} width={600} height={300}  className='mr-auto'/>
         <Image className="ml-[1000px] md:block absolute md:ml-[0%] mb-[19%] lg:mb-[10%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 1" />
         <Image className="ml-[1000px] md:block absolute md:ml-[0%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 2" />
@@ -70,20 +83,17 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
          <div className="h-[0px] "></div>
          <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start"><Image height={40} width={40} src={'mynaui_star-solid.svg'}></Image>unique</h3>
          <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start"> 
-         Lorem ipsum dolor sit   amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+         Engage in exciting projects that combine creativity and technology. As part of our IoT club, you’ll be working on innovative solutions that have real-world applications, from smart devices to connected environments. Stand out by being part of a forward-thinking community shaping the future. </p>
 
        
          <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'mdi_gear.svg'}></Image>Access to Cutting-Edge Technology</h3>
          <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+         Get hands-on experience with the latest IoT tools, devices, and platforms. Whether you're building sensor networks or automating systems, you’ll have access to the best technology to bring your ideas to life and create impactful solutions in areas like smart cities, healthcare, and beyond.  </p>
         
        
          <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'tabler_briefcase-filled.svg'}></Image>accomplished mentors</h3>
          <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+         Learn from experienced professionals in the field of IoT who will guide you every step of the way. Our mentors provide valuable insights and practical knowledge, ensuring you have the skills and understanding to excel in your projects and future career. </p>
          
         </div>
         <div className="grid-item item6 flex justify-end pr-[40px]">
@@ -92,69 +102,40 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
       
         <GameDetails 
         title="Game Details" 
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. &  sunt in culpa qui officia deserunt mollit anim id est laborum."
+        paragraph="Six hidden cards are scattered around the school of ESTIN. To find each card, you must complete a series of three quizzes per card. Each quiz you solve reveals a hint, giving you more information about the location of the hidden card. Only those who find one card before others qualify for the final game, where you can win prizes that will help boost your IoT career."
           />
           <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
           <Card 
             src="arrow.svg" 
             title="The Objective of the Game" 
-            paragraph={paragraph} 
+            paragraph={"The goal is to be the first to find one of six hidden cards on campus. Solve quizzes to unlock hints about each card’s location. Only the quickest players will qualify for the final game, with chances to win exciting IoT-related prizes. "} 
           />
           <Card 
             src="prize.svg" 
             title="Win Many Prizes" 
-            paragraph={paragraph} 
+            paragraph={"Players who find the hidden cards will qualify for the final game. In this stage, winners stand a chance to win exciting prizes that will enhance their IoT careers. These prizes are designed to give you hands-on experience with IoT technologies and make you stand out in the field."} 
           />
           <Card 
             src="time.svg" 
             title="The Period of the Game" 
-            paragraph={paragraph} 
+            paragraph={"The game starts on 21 October and ends on 22 October. During this period, players must solve the quizzes, find the hidden cards, and qualify for the final game. Keep your mind sharp and act fast to increase your chances of winning."} 
           />
               </div>
 
-              <GameDetails 
+              <GameDetails  
               title="Hints" 
-              paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. &  sunt in culpa qui officia deserunt mollit anim id est laborum."
+              paragraph=" Play the quizes and get the hints  & then start searching for the cards ."
              />
 
 
 <div className="grid-item item8 flex justify-center">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-          <div className="play">Play</div>
- 
-      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode" className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-      <div className="play">Play</div>
-      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-      <div className="play">Play</div>
- 
-      {/* <scrixpt type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-      <div className="play">Play</div>
-  
-      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-      <div className="play">Play</div>
-      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
-    <div className="spline-card z-0 flex-col-reverse  w-full bg-white border-4  rounded flex items-center justify-center">
-      <div className="play">Play</div>
-      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js"></script> */}
-      <spline-viewer url="https://prod.spline.design/8iXD8T1UPl8mwj9i/scene.splinecode"className="z-0" camera-controls="zoom: false"></spline-viewer>
-    </div>
+    <Game></Game>
+    <Game></Game>
+    <Game></Game>
+    <Game></Game>
+    <Game></Game>
+    <Game></Game>
   </div>
 </div>
 
@@ -164,11 +145,10 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
       
               <GameDetails 
         title="Found an item?" 
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. &  sunt in culpa qui officia deserunt mollit anim id est laborum."
+        paragraph="inform us and show in the welcome day to participate in fun games and have the chance to win cool prizes."
           />
           
-           <div className="grid-item item9 flex justify-center items-start p-[2%]">
+           <div id="game" className="grid-item item9 flex justify-center items-start p-[2%]">
           <MyForm></MyForm>
           </div>
 

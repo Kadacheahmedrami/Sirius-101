@@ -4,6 +4,25 @@
 @tailwind utilities;
 
 
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+[data-theme='dark'] {
+  --background-color: white; /* Keep background white */
+  --text-color: black; /* Keep text black */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 .lds-ripple,
 .lds-ripple div {
   box-sizing: border-box;
@@ -160,7 +179,7 @@ img
   margin-left: 25px;
 }
 
-.nav-links a {
+.nav-links .linea {
   color: #000000;
   opacity: 60%;
   text-decoration: none;
@@ -170,11 +189,11 @@ img
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links .linea:hover{
   color:#7939ff;
 }
 
-.nav-links a::after {
+.nav-links .linea::after {
   content: '';
   position: absolute;
   width: 0;
@@ -520,3 +539,45 @@ grid-template-columns: 50% 50%;
   opacity: 1;
  
 } */
+
+
+.cool-button {
+
+  position: relative;
+  width: 360px;
+  height: 74px;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cool-button:hover {
+  color: white;
+  background-color: black;
+  border-color: white;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.cool-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.cool-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}

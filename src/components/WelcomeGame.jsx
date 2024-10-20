@@ -72,7 +72,7 @@ const WelcomeGame = () => {
     <>
   
 
-      <div className="grid-item item4 flex justify-start items-center gap-[40px]">
+      <div  className="grid-item item4 flex justify-start items-center gap-[40px]">
         <Image className="  absolute md:ml-[22%] lg:ml-[25%] md:mb-[42%] lg:mb-[18%] rotate-[210deg] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 4" />
         <Image className=" absolute md:ml-[12%] lg:ml-[20%] md:mb-[30%] lg:mb-[10%] rotate-[210deg] lg:rotate-[260deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 5" />
         <Image className="  absolute md:ml-[15%] md:mb-[12%] rotate-[240deg] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 6" />
@@ -82,7 +82,9 @@ const WelcomeGame = () => {
         
         </div>
         <div className="flex flex-col gap-[10px]">
-          <h2 className="text-[38px] md:text-[58px] font-[700] text-[#121212] leading-[56.88px] text-center md:text-start flex flex-row justify-start items-center gap-3">What is <Image src={'SIRIUS.svg'} height={150} width={210}></Image> ?</h2>
+          <h2 className="text-[32px] md:text-[58px] font-[400] md:font-[700]
+           text-[#121212] leading-[56.88px] text-center md:text-start
+            flex flex-row justify-start items-center gap-3">What is <Image src={'SIRIUS.svg'} height={150} width={210}></Image> ?</h2>
           <p className="text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
             Siruis is a science club located in Amizour Bejaia formed by a bunch of students to help others learn about hardware.
           </p>
