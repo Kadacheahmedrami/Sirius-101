@@ -180,7 +180,7 @@ console.log(user)
                 } }
               />
             ))}
-            <button className='bg-green w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
+            <button className='bg-green-400 w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
 }}>
            <h1 className='text-3xl '>   change the items bro</h1>
             </button>
