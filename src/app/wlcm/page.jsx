@@ -1,4 +1,4 @@
-"use client"
+
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import Footer from "../../components/Footer"
@@ -7,41 +7,17 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
+import { useUser } from "@clerk/nextjs";
 
-async function getId() {
-  try {
-    // Make the fetch request to the API
-    const response = await fetch('http://localhost:3000/api/data');
-    
-    // Check if the response is okay (status code 200-299)
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    
-    // Parse the JSON from the response
-    const data = await response.json();
-    
-    // Access the userId from the JSON response
-    const userId = data.data.userId;
-    console.log('User ID:', userId);
-    
-    // Return the userId for further use
-    return userId;
-    
-  } catch (error) {
-    // Handle any errors
-    console.error('There was a problem with the fetch operation:', error);
-  }
-}
 
 
 
 
 export default function Home() {
- 
 
-let id = getId()
-console.log(id)
+
+  let games = [0,1,0,0,1,0];
+
    return (
 <>  
  <title>Sirius Game</title>
@@ -160,12 +136,12 @@ console.log(id)
 
 <div className="grid-item item8 flex justify-center">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
+    <Game keyParam="someKey" value={games[0]}></Game>
+    <Game  keyParam="someKey" value={games[1]}></Game>
+    <Game  keyParam="someKey" value={games[2]}></Game>
+    <Game  keyParam="someKey" value={games[3]}></Game>
+    <Game  keyParam="someKey" value={games[4]}></Game>
+    <Game  keyParam="someKey" value={games[5]}></Game>
   </div>
 </div>
 

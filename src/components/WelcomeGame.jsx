@@ -84,7 +84,7 @@ const WelcomeGame = () => {
         <div className="flex flex-col gap-[10px]">
           <h2 className="text-[32px] md:text-[58px] font-[400] md:font-[700]
            text-[#121212] leading-[56.88px] text-center md:text-start
-            flex flex-row justify-start items-center gap-3">What is <Image src={'SIRIUS.svg'} height={150} width={210}></Image> ?</h2>
+            flex flex-row justify-start items-center w-[120%] gap-3">What is <Image src={'SIRIUS.svg'} height={150} width={210}></Image> ?</h2>
           <p className="text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
             Siruis is a science club located in Amizour Bejaia formed by a bunch of students to help others learn about hardware.
           </p>

@@ -137,7 +137,7 @@ export default function Home() {
 />
 
 
-<div className='absolute bottom-[20%] w-[200%] h-[820px] translate-y-[25%] translate-x-[15%] overflow-hidden z-[-1] min-h-screen md:z-[1] opacity-20 md:opacity-100'>
+<div className='hidden md:block absolute bottom-[20%] w-[200%] h-[820px] translate-y-[25%] translate-x-[15%] overflow-hidden z-[-1] min-h-screen md:z-[1] opacity-20 md:opacity-100'>
 <spline-viewer url="https://prod.spline.design/jHlH12SKOpUm3lVo/scene.splinecode"></spline-viewer>
         
 </div>

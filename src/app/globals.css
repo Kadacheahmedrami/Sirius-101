@@ -585,3 +585,18 @@ grid-template-columns: 50% 50%;
   transform: scaleX(1);
   transform-origin: left;
 }
+
+
+/* Define the 3D and rotation effect */
+.image-container {
+  perspective: 1000px; /* For 3D effect */
+}
+
+.image-container img {
+  transition: transform 0.5s ease; /* Smooth transition */
+  transform-style: preserve-3d; /* Preserve 3D effect */
+}
+
+.image-container img:hover {
+  transform: rotateY(360deg); /* Rotate around the Y-axis */
+}
