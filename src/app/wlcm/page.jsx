@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
-
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
 import MyForm from '../../components/MyForm'; 
@@ -88,7 +87,7 @@ console.log("Webhook Secret:", process.env.WEBHOOK_SECRET);
        
          <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'mdi_gear.svg'}></Image>Access to Cutting-Edge Technology</h3>
          <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-         Get hands-on experience with the latest IoT tools, devices, and platforms. Whether you're building sensor networks or automating systems, you’ll have access to the best technology to bring your ideas to life and create impactful solutions in areas like smart cities, healthcare, and beyond.  </p>
+         Get hands-on experience with the latest IoT tools, devices, and platforms. Whether {"you're"} building sensor networks or automating systems, you’ll have access to the best technology to bring your ideas to life and create impactful solutions in areas like smart cities, healthcare, and beyond.  </p>
         
        
          <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'tabler_briefcase-filled.svg'}></Image>accomplished mentors</h3>
