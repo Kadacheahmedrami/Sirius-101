@@ -10,7 +10,7 @@ export default function Home() {
   const {user} = useUser();
   const clerkId = user.clerkId ;
   const items = user.items ; 
- 
+ console.log(clerkId)
  console.log(items)
  
   const updateItems = async (clerkId, updatedItems) => {
