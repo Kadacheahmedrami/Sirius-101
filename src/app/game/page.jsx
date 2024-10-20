@@ -6,8 +6,8 @@ import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 import Loader from "../../components/Loader"
 export default function Home() {
- const clerkId = null ;
- const items = []
+ let clerkId = null ;
+ let items = []
   const {user,isLoaded,isSignedIn} =  useUser();
   if(isLoaded && isSignedIn){
 
