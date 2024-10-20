@@ -17,29 +17,29 @@ export default function Home() {
  console.log(clerkId)
  console.log(items)
  
-  const updateItems = async (clerkId, updatedItems) => {
-    try {
-      const response = await fetch('/api/updateItems', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          clerkId,      // Clerk ID of the user
-          items: updatedItems  // New items array
-        }),
-      });
+  // const updateItems = async (clerkid, updatedItems) => {
+  //   try {
+  //     const response = await fetch('/api/updateItems', {
+  //       method: 'PUT',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         clerkid,      // Clerk ID of the user
+  //         items: updatedItems  // New items array
+  //       }),
+  //     });
   
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Items updated:', result);
-      } else {
-        console.error('Failed to update items:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error sending PUT request:', error);
-    }
-  };
+  //     if (response.ok) {
+  //       const result = await response.json();
+  //       console.log('Items updated:', result);
+  //     } else {
+  //       console.error('Failed to update items:', response.statusText);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error sending PUT request:', error);
+  //   }
+  // };
  
 
 
