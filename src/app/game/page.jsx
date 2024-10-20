@@ -99,7 +99,7 @@ export default function Home() {
 />
 
 
-<div className='absolute bottom-[20%] w-[200%] h-[820px] translate-y-[25%] translate-x-[15%] overflow-hidden z-[1]'>
+<div className='absolute bottom-[20%] w-[200%] h-[820px] translate-y-[25%] translate-x-[15%] overflow-hidden z-[-1] min-h-screen md:z-[1] opacity-20 md:opacity-100'>
 <spline-viewer url="https://prod.spline.design/jHlH12SKOpUm3lVo/scene.splinecode"></spline-viewer>
         
 </div>
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
 
         {/* Stepper Navigation */}
-        <div className="flex justify-center mt-4 ">
+        <div className="z-[3] flex justify-center mt-4 ">
           {[1, 2, 3].map((s) => (
             <div key={s} className="flex items-center">
               <div className={`h-12 md:h-14 w-12 md:w-14 rounded-full  border-black border-opacity-60 flex items-center justify-center ${step >= s ? 'bg-[#17A2B8] text-white border-[#17A2B8]' : 'bg-gray-300 text-black'}`}>
@@ -155,11 +155,11 @@ export default function Home() {
 
       {/* Pop-up Hint Modal */}
       {showHint && (
-        <div className="fixed w-[100%] gap-[100px] inset-0 flex justify-center items-center z-50"
+        <div className="absolut w-[100%]   flex justify-center translate-y-[-80%] items-center z-50"
         onClick={handleNext}
         >
-          <div className="bg-[#AB0ABD] h-[380px] p-6 rounded-[48px] shadow-lg md:w-[40%] flex flex-col justify-center items-center gap-[25px]">
-            <div className="text-white text-[30px] font-bold p-[10px] px-[20px] border-[#00E0FF]  rounded-[30px] justify-center items-center flex flex-row gap-[10px]">
+          <div className="bg-[#AB0ABD] h-[480px] p-6 rounded-[48px] shadow-lg md:w-[40%] flex flex-col justify-center items-center gap-[15px]">
+            <div className="text-white text-[30px] font-bold p-[10px] px-[20px] border-[#00E0FF] border-[2px]  rounded-[30px] justify-center items-center flex flex-row gap-[10px]">
               {Hints[step-1]} Hint <Image src={'lamp.svg'} width={30} height={30}></Image>
               </div>
             <p className='text-white w-[90%] text-center text-[20px]'>Lorem ipsum dolor sit amet, 
