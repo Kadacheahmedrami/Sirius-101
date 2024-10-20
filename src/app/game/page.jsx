@@ -7,7 +7,12 @@ import { useUser } from "@clerk/nextjs";
 
 export default function Home() {
 
-  const { isLoaded, isSignedIn, user } = useUser();
+  const {user} = useUser();
+  const clerkId = user.clerkId ;
+  const items = user.items ; 
+ 
+ console.log(items)
+ 
   const updateItems = async (clerkId, updatedItems) => {
     try {
       const response = await fetch('/api/updateItems', {
@@ -35,12 +40,8 @@ export default function Home() {
 
 
   
- const clerkId   = user.clerkId ;
- const items = user.items ; 
 
-
-
-  updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
+  // updateItems(clerkId, [1, 2, 3, 4, 5, 6]);  // Example of updating the items array
   
 
   const [step, setStep] = useState(1); // Track the current step
@@ -51,7 +52,6 @@ export default function Home() {
 
 
  
-
 
   const Hints = ['First', 'Second' ,'Third'];
 
@@ -149,11 +149,7 @@ export default function Home() {
            
 
       <div className={` w-[100%] lg:w-[60%] mt-10   ${showHint ? 'blur-sm' : ''}`}>
-      <button
-                onClick={()=>updateItems(clerkId, [1, 2, 3, 4, 5, 6])}
-                className="bg-black font-[700] rounded-[10px] flex justify-center items-center text-[20px] text-white w-[100%] px-4 py-2 ">
-                Change Me if u can 
-              </button>
+
         <h1 className="text-[58px] hidden lg:block font-bold text-center">The Game</h1>
 
         {/* Quiz Content */}

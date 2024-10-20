@@ -2,8 +2,6 @@
   import {connect} from "../../../db" 
   import User from '../../../modals/user.modal';   // Mongoose User model
   export async function PUT(req: NextRequest) {
-
-    
       try {
         // Connect to MongoDB
         const body = await req.json();
