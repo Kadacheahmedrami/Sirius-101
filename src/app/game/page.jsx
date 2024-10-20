@@ -6,64 +6,17 @@ import Script from "next/script";
 import { useUser } from "@clerk/nextjs";
 import Loader from "../../components/Loader"
 export default function Home() {
-
-
-
   const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
   const [items, setItems] = useState([]); // Use state to store items
   const {user,isLoaded,isSignedIn} =  useUser();
-
-
-  useEffect(() => {
-    if (isLoaded && isSignedIn) {
-      setClerkId(user.id); // Use user.id to get the Clerk ID
-      setItems(user.items); // Assuming user.items exists
-      console.log(clerkId)
-      console.log(user.items);
-    }
-  }, [isLoaded, isSignedIn, user]);
-
-  if(isLoaded){
- return <Loader/>
-  }
-
-
- 
-  const updateItems = async (clkId, updatedItems) => {
-    try {
-      const response = await fetch('/api/updateItems', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          clerkId : clkId,      // Clerk ID of the user
-          items: updatedItems  // New items array
-        }),
-      });
-  
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Items updated:', result);
-      } else {
-        console.error('Failed to update items:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error sending PUT request:', error);
-    }
-  };
- 
-console.log("user : ")
+  console.log("user : ")
   console.log(user)
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [isCorrect, setIsCorrect] = useState(false); // Check if the answer is correct
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
- 
-
   const Hints = ['First', 'Second' ,'Third'];
-
   const quizData = {
     1: {
       question: "What is the capital of France?",
@@ -93,6 +46,45 @@ console.log("user : ")
       ]
     }
   };
+
+
+  useEffect(() => {
+    if (isLoaded && isSignedIn) {
+      setClerkId(user.id); // Use user.id to get the Clerk ID
+      setItems(user.items); // Assuming user.items exists
+      console.log(clerkId)
+      console.log(user.items);
+    }
+  }, [isLoaded, isSignedIn, user]);
+
+
+
+ 
+  const updateItems = async (clkId, updatedItems) => {
+    try {
+      const response = await fetch('/api/updateItems', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clerkId : clkId,      // Clerk ID of the user
+          items: updatedItems  // New items array
+        }),
+      });
+  
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Items updated:', result);
+      } else {
+        console.error('Failed to update items:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending PUT request:', error);
+    }
+  };
+ 
+
 
   const handleAnswerSelect = (answer) => {
     setSelectedAnswer(answer);
@@ -133,7 +125,9 @@ console.log("user : ")
   const closeHint = () => {
     setShowHint(false);
   };
-
+  if(isLoaded){
+    return <Loader/>
+     }
   return (
     <>
 
@@ -177,7 +171,7 @@ console.log("user : ")
                 } }
               />
             ))}
-            <button className='bg-green-400 w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
+            <button className='bg-green-600 w-[400px] h-[400px] '  onClick={()=>{updateItems(clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
 }}>
            <h1 className='text-3xl '>   change the items bro</h1>
             </button>

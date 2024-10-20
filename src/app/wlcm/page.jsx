@@ -8,40 +8,11 @@ import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
 
-// async function getId() {
-//   try {
-//     // Make the fetch request to the API
-//     const response = await fetch('http://localhost:3000/api/data');
-    
-//     // Check if the response is okay (status code 200-299)
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-    
-//     // Parse the JSON from the response
-//     const data = await response.json();
-    
-//     // Access the userId from the JSON response
-//     const userId = data.data.userId;
-//     console.log('User ID:', userId);
-    
-//     // Return the userId for further use
-//     return userId;
-    
-//   } catch (error) {
-//     // Handle any errors
-//     console.error('There was a problem with the fetch operation:', error);
-//   }
-// }
-
-
 
 
 export default function Home() {
  
 
-// let id = getId()
-// console.log(id)
    return (
 <>  
  <title>Sirius Game</title>
