@@ -7,11 +7,12 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
+import { useState } from "react";
 
 
 
 export default function Home() {
- 
+
 
    return (
 <>  

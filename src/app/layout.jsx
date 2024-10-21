@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           <div className="flex h-screen items-center justify-center  ">
           <Loader/>
           </div>
-        </ClerkLoading>
+        </ClerkLoading> 
         <ClerkLoaded >
  
        </ClerkLoaded>

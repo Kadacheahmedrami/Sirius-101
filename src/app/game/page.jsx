@@ -12,8 +12,9 @@ export default function Home() {
   // console.log("user : ")
   // console.log(user)
 
-
-
+  // if (!isLoaded || !isSignedIn) {
+  //   return <div>Loading...</div>;  // Optionally, show a loading message
+  // }
 
   const [step, setStep] = useState(1); // Track the current step
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
@@ -62,7 +63,7 @@ export default function Home() {
   // }, [isLoaded, isSignedIn, user]);
 
 
-
+ 
  
   const updateItems = async (clkId, updatedItems) => {
     try {
@@ -88,6 +89,13 @@ export default function Home() {
     }
   };
  
+
+
+
+
+
+
+  
 
 
   const handleAnswerSelect = (answer) => {

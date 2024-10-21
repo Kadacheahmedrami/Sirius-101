@@ -20,6 +20,11 @@ const userShema = new Schema({
     lastName: {
         type:   String ,
     },
+
+    foundImage : {
+        type:   String ,
+        default : "" ,
+    },
    photo: {
         type:   String ,
         required: true ,
