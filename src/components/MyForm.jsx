@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import CustomInput from '../components/CustomInput';  // Adjust the import path as necessary
 import Image from 'next/image'; // Ensure you have the right import for your image

@@ -7,14 +7,14 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
-import { useState } from "react";
+
 import { useUser } from "@clerk/nextjs";
 
 
 
 export default function Home() {
   const {user} = useUser()
-  const clerkId = user.clerkId 
+  const clerkId = user.id 
   const item = user.items
 
 
