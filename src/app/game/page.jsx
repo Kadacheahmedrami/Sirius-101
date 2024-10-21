@@ -112,16 +112,51 @@ export default function Home() {
     }
   ];
   
+    const revealHint = [
+       {
+        0:  "   صحاااا شلواح فخورة : KEEP THIS NUMBER YOU ARE GONNA NEED IT",
+        1:  "    win les absences ytmarkaw 😬😬😬",
+        2:  "     AT Salle TD numero =  the number of the first quiz !"
+      },
+      {
+        0:  "   TESLA , like the one u cant affffford",
+        1:  "   win les absences ytmarkaw 😬😬😬",
+        2:  "   معولتكش توصل هنا  head to elecrtric station en face administration      "
+      },
+      {
+        0:  "   the only game  to play at ESTIN",
+        1:  "   FIHA boulle mesrou9a",
+        2:  " Head to the babyfoot li mafihach boulla ( لقبايل لي سرقوها )  fla biiiiiiiiiiiib .  "
+      },
+      {
+        0:  "   BROKEN FOR YEARS ",
+        1:  "9bel maykoun 3ndna foyer we existed b  un distribiteur fachel  .",
+        2:  " the non-working vending machine .just like your RIZZ "
+      },
+      {
+        0:  "   Water flows just like data there ",
+        1:  " unnecessary part fl campus jay vraiment useless , لخرة وصاي",
+        2:  " Now head to the fountain  between amphie1 and amphie5 ."
+      },
+      {
+        0:  " RAHI 3ND BNADEM THIS TIME CEO OF DRACARYSMODES ",
+        1:  "  شيكور الدنياThis person is a famous 2CP student G0X (been in 2cp for two years now)",
+        2:  " FIND THE GMAIL SPAMMER AND TELL HIM  قبضة البعبع"
+      },
 
 
-  const quizData = quizes[0]
+    ]
 
+
+   let i=1
+  const quizData = quizes[i]
+  const hinttext = revealHint[i]
   // useEffect(() => {
   //   if (isLoaded && isSignedIn) {
   //     setClerkId(user.id); // Use user.id to get the Clerk ID
   //     setItems(user.items); // Assuming user.items exists
   //     console.log(clerkId)
-  //     console.log(user.items);
+  //     console.log(user.items); 
   //   }
   // }, [isLoaded, isSignedIn, user]);
 
@@ -169,12 +204,13 @@ export default function Home() {
     } else {
       // post request 
       // the player won
-      location.href = '/wlcm';
+      location.href = '/wlcm#game';
     }
   };
 
   const show = ()=>{
     if (isCorrect) {
+       setSelect(false)
       setShowHint(true); // Show the hint pop-up
     }
     else {
@@ -184,6 +220,7 @@ export default function Home() {
         location.href = '/wlcm';
       }
       else{
+      
         // didnt select yet
       }
       
@@ -219,14 +256,14 @@ export default function Home() {
       )}
            
 
-      <div className={` w-[100%] lg:w-[60%] mt-10   ${showHint ? 'blur-sm' : ''}`}>
+      <div className={`flex flex-col w-[100%] lg:w-[60%] mt-10   ${showHint ? 'blur-sm' : ''}`}>
 
         <h1 className="text-[58px] hidden lg:block font-bold text-center">The Game</h1>
 
         {/* Quiz Content */}
         <div className="flex gap-[10px] flex-col lg:flex-row w-[100%]">
           <div className="flex flex-col gap-1  px-2 lg:px-8 mb-4 w-[100%] lg:w-[50%]">
-            <h1 className=" font-bold text-lg lg:mb-4 w-[450px]">{step + ') ' + quizData[step].question}</h1>
+            <h1 className=" font-bold text-lg lg:mb-4 w-[100%] md:w-[450px]">{step + ') ' + quizData[step].question}</h1>
             {quizData[step].answers.map((answer) => (
               <QuizItem
                 key={answer.id}
@@ -239,10 +276,7 @@ export default function Home() {
                 } }
               />
             ))}
-            <button className='bg-green-600 w-[400px] h-[400px] '  onClick={()=>{updateItems(user.clerkId, [6, 6, 6, 6, 6, 6]);  // Example of updating the items array
-}}>
-           <h1 className='text-3xl '>   change the items bro</h1>
-            </button>
+  
             <button
               onClick={ show }
               className='z-[2] w-[100%] h-[51px] rounded-[100px] bg-[#AB0ABD] text-white text-[22px] font-[700] flex justify-center items-center'>
@@ -277,12 +311,9 @@ export default function Home() {
             <div className="text-white text-[30px] font-bold p-[10px] px-[20px] border-[#00E0FF] border-[2px]  rounded-[30px] justify-center items-center flex flex-row gap-[10px]">
               {Hints[step-1]} Hint <Image src={'lamp.svg'} width={30} height={30}></Image>
               </div>
-            <p className='text-white w-[90%] text-center text-[20px]'>Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et 
-               dolore magna aliqua.
-               sunt in culpa qui officia deserunt mollit
-                anim id est laborum.</p>
+            <p className='text-white w-[90%] text-center text-[50px]'>
+             { hinttext[step-1] }
+              </p>
             <div className="flex  w-[90%] justify-end mt-4">
               <button
                 onClick={handleNext}
