@@ -1,4 +1,4 @@
-"use client"
+
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import Footer from "../../components/Footer"
@@ -8,10 +8,24 @@ import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
 import { useState } from "react";
+import { useUser } from "@clerk/nextjs";
 
 
 
 export default function Home() {
+  const {user} = useUser()
+  const clerkId = user.clerkId 
+  const item = user.items
+
+
+console.log("clerk Id from welcom ")
+  console.log(item)
+
+  console.log("ITems array ")
+  console.log(item)
+
+
+  let games = [0,1,0,0,1,0];
 
 
    return (
@@ -132,12 +146,12 @@ export default function Home() {
 
 <div className="grid-item item8 flex justify-center">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
-    <Game></Game>
+    <Game keyParam="someKey" value={games[0]}></Game>
+    <Game  keyParam="someKey" value={games[1]}></Game>
+    <Game  keyParam="someKey" value={games[2]}></Game>
+    <Game  keyParam="someKey" value={games[3]}></Game>
+    <Game  keyParam="someKey" value={games[4]}></Game>
+    <Game  keyParam="someKey" value={games[5]}></Game>
   </div>
 </div>
 
