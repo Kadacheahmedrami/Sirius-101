@@ -6,15 +6,15 @@ import { useUser } from "@clerk/nextjs";
 const Welcome = () => {
   const { isLoaded, isSignedIn, user } = useUser();
 
-//    if(!isSignedIn){
-// redirect("./sign-up")
-//  }else{
+   if(!isSignedIn){
+redirect("./sign-up")
+ }else{
     redirect("./wlcm")
 
  }
 
 
-// };
+};
 
 export default Welcome;
 

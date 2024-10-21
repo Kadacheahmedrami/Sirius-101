@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
       // Connect to MongoDB
       const body = await req.json();
       await connect();
-      const { foundImage  ,clerkId} = body;
+      const { foundImage ,clerkId} = body;
 
 
     // Validate input

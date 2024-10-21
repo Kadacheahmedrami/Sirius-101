@@ -3,12 +3,10 @@ import { useState ,useEffect } from 'react';
 import Image from "next/image";
 import QuizItem from "../../components/QuizItem";
 import Script from "next/script";
-import { useUser } from "@clerk/nextjs";
-import Loader from "../../components/Loader"
+
 export default function Home() {
   // const [clerkId, setClerkId] = useState(null); // Use state to store clerkId
   // const [items, setItems] = useState([]); // Use state to store items
-  const {user,isLoaded,isSignedIn} =  useUser();
   // console.log("user : ")
   // console.log(user)
 
@@ -21,7 +19,11 @@ export default function Home() {
   const [isCorrect, setIsCorrect] = useState(false); // Check if the answer is correct
   const [showHint, setShowHint] = useState(false); // Control the hint pop-up visibility
   const [select , setSelect] = useState(false);
-  const Hints = ['First', 'Second' ,'Third'];
+
+  const Hints = ['First', 'Second' ,'Third']; 
+   const [data , setData] = useState(false);
+
+
 
   const quizes = [
     {
@@ -191,8 +193,24 @@ export default function Home() {
 
 
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/data');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const result = await response.json();
+        setData(result.data); // Accessing the 'data' field from your API response
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-
+    fetchData();
+  }, []);
 
   
 
@@ -292,11 +310,10 @@ export default function Home() {
             </button>
 
 
-            <button
-              onClick={()=>updateItems(user.clerkId,[7,7,7,7,7,7])}
+            {/* <button
+              onClick={()=>updateItems(data.userId,[7,7,7,7,7,7])}
               className='z-[50] w-[100%] absolute h-[200px] rounded-[100px] bg-red-500 text-white text-[22px] font-[700] flex justify-center items-center'>
-              Submit
-            </button>
+SEND THE REQUEST            </button> */}
           </div>
 
     

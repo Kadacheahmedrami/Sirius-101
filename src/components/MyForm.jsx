@@ -1,11 +1,9 @@
+"use client"
 import React, { useState } from 'react';
-import CustomInput from '../components/CustomInput';  // Adjust the import path as necessary
 import Image from 'next/image'; // Ensure you have the right import for your image
-import { useUser } from '@clerk/nextjs';
 
-const MyForm = () => {
+const MyForm = ({userId}) => {
   const [HachedImage, setHashedImage] = useState(""); 
-  const {user,isLoaded,isSignedIn} =  useUser();
   const convertTobase64 = (e)=>{
     var reader = new FileReader()
     reader.readAsDataURL(e.target.files[0])
@@ -19,7 +17,7 @@ console.log("error",error)
     }
   }
 
-
+console.log(userId)
   const uploadImage = async (clkId, hashedImage) => {
     try {
       const response = await fetch('/api/updateItems', {
@@ -44,7 +42,6 @@ console.log("error",error)
     }
   };
 
-  const clerkId = user.clerkId ; 
 
 
   return (
@@ -71,7 +68,7 @@ console.log("error",error)
 
       <button
         type="submit"
-        onSubmit={()=>{uploadImage(clerkId,HachedImage)}}
+        onSubmit={()=>{uploadImage(userId,HachedImage)}}
         className="col-span-2 w-full flex justify-center items-center h-[50px] p-5 bg-[#AB0ABD] text-white rounded-xl mt-4 text-lg"
       >
         Submit

@@ -7,23 +7,18 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
-import { useState } from "react";
-import { useUser } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs/server";
 
 
 
-export default function Home() {
-  const {user} = useUser()
-  const clerkId = user.clerkId 
-  const item = user.items
+export default async function Home() {
 
+  const { userId } = auth();
+  const user = await currentUser();
 
 console.log("clerk Id from welcom ")
-  console.log(item)
-
-  console.log("ITems array ")
-  console.log(item)
-
+console.log(userId)
+console.log("ITems array ")
 
   let games = [0,1,0,0,1,0];
 
@@ -165,7 +160,7 @@ console.log("clerk Id from welcom ")
           />
           
            <div id="game" className="grid-item item9 flex justify-center items-start p-[2%]">
-          <MyForm></MyForm>
+          <MyForm userId={userId}></MyForm>
           </div>
 
 
