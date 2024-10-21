@@ -7,7 +7,7 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
-
+import { auth } from "@clerk/nextjs/server";
 
 
 export default function Home() {
