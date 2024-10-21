@@ -7,14 +7,12 @@ import MyForm from '../../components/MyForm';
 import WelcomeGame from "../../components/WelcomeGame";
 import Game from "../../components/Game";
 import Script from "next/script";
-import { auth, currentUser } from "@clerk/nextjs/server";
 
 
 
-export default async function Home() {
+export default function Home() {
 
   const { userId } = auth();
-  const user = await currentUser();
 
 console.log("clerk Id from welcom ")
 console.log(userId)

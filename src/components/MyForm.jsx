@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { useState } from 'react';
 import Image from 'next/image'; // Ensure you have the right import for your image
 
