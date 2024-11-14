@@ -3,89 +3,58 @@ import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
-import MyForm from '../../components/MyForm'; 
 import WelcomeGame from "../../components/WelcomeGame";
-import Game from "../../components/Game";
 import Script from "next/script";
-import { auth } from "@clerk/nextjs/server";
+import NavBar from "../../components/NavBar";
+import localFont from "next/font/local";
+import { Unbounded } from 'next/font/google';
+const unbounded = Unbounded({
+  weight: ['400', '700'],  // specify weights as needed
+  subsets: ['latin'],      // specify subsets
+});
 
-
+const minecrafterAlt = localFont({
+  src:'../fonts/Minecrafter.Alt.ttf',
+  display: 'swap',
+  weight: '300', // Specify weight if needed
+  style: 'normal' // Specify style if needed
+});
 export default function Home() {
-
-  const { userId } = auth();
-
-console.log("clerk Id from welcom ")
-console.log(userId)
-console.log("ITems array ")
-
-  let games = [0,1,0,0,1,0];
 
 
    return (
 <>  
- <title>Sirius Game</title>
-
-               
-    
+        
       <Script 
         type="module" 
         src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
         strategy="afterInteractive" // This loads the script after the page becomes interactive
       />
-
-      <div className="grid-container">
-       
+    <NavBar/>
+      <div className="grid-container border">
       <div className=" grid-item item1 flex flex-col gap-[10px] justify-center items-center">
-        <p className="text-[23px] font-[700] text-[#7939FF] leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full">
-          Welcome Game
+        <p className={`${unbounded.className}  text-[24px] font-[700] text-[#5966F3]  leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full`}>
+        Our upcoming event
         </p>
-        <h1 className="text-[32px] md:text-[58px] font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full">
-          Find the hidden items and <br className="hidden lg:block" /> win prizes on Welcome Day
+        <div className="flex flex-row items-center">
+        <h1 className={`text-[32px] md:text-[58px]  mr-4 font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
+        SIRIUS 101 Workshops 
         </h1>
-        <p className="text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-          Siruis is a science club located in Amizour Bejaia formed by a bunch of students from ESTIN to help other students learn about hardware.
+        <Image  src={"knife.svg"} alt="Knif " width={60} height={60}/>
+        </div>
+     
+        <p className={`${unbounded.className} text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
+        Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you{ `'` }re a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Let’s embark on this exciting journey together and unlock the endless possibilities of IoT!
         </p>
 
-      <div className="mx-auto md:mx-0">
-      <a href="#start" className="mx-auto">
-          <button className="cool-button  md:w-[720px] h-[74px] my-5 ">
-            Start Playing
-          </button>
-        </a>
-      </div>
 
      
       
       </div>
-
-
       <div   className="grid-item item2 h-[500px] justify-end" draggable="false">
-        <Image className="cursor-pointer relative left-16" src={'/robot.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
-      </div>
-
-      <div className="hidden md:block animate h-[200px] w-full">
-        <Image className="ml-[67%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 1" />
-        <Image className="ml-[60%] rotate-[210deg] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 2" />
-        <Image className="ml-[62%] mt-[1%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/onefoot.svg'} width={30} height={30} alt="Foot 3" />
-      </div>
-
-      <div id='about' className="grid-item item3 flex flex-row overflow-hidden justify-center items-center gap-[37%] relative">
-        <Image alt="Right" src={'/right.svg'} width={600} height={300}  className='mr-auto'/>
-        <Image className="ml-[1000px] md:block absolute md:ml-[0%] mb-[19%] lg:mb-[10%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 1" />
-        <Image className="ml-[1000px] md:block absolute md:ml-[0%] rotate-[210deg] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 2" />
-        <Image className="ml-[1000px] md:block absolute md:ml-[-20%] lg:ml-[-15%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 3" />
-        <Image className="ml-[1000px] md:block absolute md:ml-[-15%] mb-[-15%] lg:mb-[-10%] rotate-[230deg] scale-x-[-1] foot-animation" src={'/bluefoot.svg'} width={30} height={30} alt="Blue Foot 4" />
-        <div className="text-[32px] md:text-[40px] font-[700] text-[#ffffff] leading-[56.88px] flex flex-row absolute gap-3">
-          About  <Image src={'SIRIUS.svg'} height={150} width={130}></Image>
-        </div>
-        <Image alt="Left" src={'/left.svg'}  className='ml-auto' width={600} height={300} />
-      </div>
-
-        <WelcomeGame></WelcomeGame>
-
-      
-        <div className="grid-item item5 flex flex-col gap-[15px]  ">
-
+        <Image className="cursor-pointer relative left-16" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
+      </div> 
+        <div className="grid-item item5 flex flex-col gap-[15px]  border">
 
          <h2 className="text-[32px] md:text-[58px] font-[700] text-[#121212] leading-[56.88px] text-center md:text-start" >Why join Us?</h2>
          
@@ -105,13 +74,14 @@ console.log("ITems array ")
          Learn from experienced professionals in the field of IoT who will guide you every step of the way. Our mentors provide valuable insights and practical knowledge, ensuring you have the skills and understanding to excel in your projects and future career. </p>
          
         </div>
-        <div className="grid-item item6 flex justify-end pr-[40px]">
+        <div className="grid-item item6 border flex justify-end pr-[40px]">
         <Image alt="pic" src={'phamily.svg'} width={650} height={500}></Image>
         </div>
-      
+
+  
         <GameDetails 
-        title="Game Details" 
-        paragraph="Six hidden cards are scattered around the school of ESTIN. To find each card, you must complete a series of three quizzes per card. Each quiz you solve reveals a hint, giving you more information about the location of the hidden card. Only those who find one card before others qualify for the final game, where you can win prizes that will help boost your IoT career."
+        mincraft={minecrafterAlt.className}
+        title="SIRIUS Club" 
           />
           <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
           <Card 
@@ -130,36 +100,18 @@ console.log("ITems array ")
             paragraph={"The game starts on 21 October and ends on 22 October. During this period, players must solve the quizzes, find the hidden cards, and qualify for the final game. Keep your mind sharp and act fast to increase your chances of winning."} 
           />
               </div>
+              <GameDetails 
+        mincraft={minecrafterAlt.className}
+        title="previous events" 
+          />  
 
-              <GameDetails  
-              title="Hints" 
-              paragraph=" Play the quizes and get the hints  & then start searching for the cards ."
-             />
 
+<div className="grid-item border bg-red-400  item8 flex justify-center">
 
-<div className="grid-item item8 flex justify-center">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-    <Game keyParam="someKey" value={games[0]}></Game>
-    <Game  keyParam="someKey" value={games[1]}></Game>
-    <Game  keyParam="someKey" value={games[2]}></Game>
-    <Game  keyParam="someKey" value={games[3]}></Game>
-    <Game  keyParam="someKey" value={games[4]}></Game>
-    <Game  keyParam="someKey" value={games[5]}></Game>
-  </div>
 </div>
 
 
-
-
-      
-              <GameDetails 
-        title="Found an item?" 
-        paragraph="inform us and show in the welcome day to participate in fun games and have the chance to win cool prizes."
-          />
-          
-           <div id="game" className="grid-item item9 flex justify-center items-start p-[2%]">
-          <MyForm userId={userId}></MyForm>
-          </div>
+ 
 
 
           </div>

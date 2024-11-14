@@ -1,8 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkLoaded, ClerkLoading, ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton, UserProfile } from '@clerk/nextjs'
-import Loader from "../components/Loader"
-import NavBar from "../components/NavBar"
+
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -15,29 +13,17 @@ import NavBar from "../components/NavBar"
 // });
 
 export const metadata = {
-  title: "siruis-game",
+  title: "siruis-101",
   description: "IOT",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
     <html lang="en">
-      <body className=" ">
-      <NavBar/>
-      <ClerkLoading className=" ">
-          <div className="flex h-screen items-center justify-center  ">
-          <Loader/>
-          </div>
-        </ClerkLoading> 
-        <ClerkLoaded >
- 
-       </ClerkLoaded>
-  
+      <body >
     {children}
       
       </body>
     </html>
-  </ClerkProvider>
   );
 }
