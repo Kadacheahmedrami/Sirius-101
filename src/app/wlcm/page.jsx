@@ -36,10 +36,10 @@ export default function Home() {
         Our upcoming event
         </p>
         <div className="flex flex-row items-center">
-        <h1 className={`text-[32px] md:text-[58px]   mx-4   font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
+        <h1 className={`text-[32px] md:text-[58px]    ml-16 md:mx-4   font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
         SIRIUS 101 Workshops 
         </h1>
-        <Image  src={"knife.svg"} alt="Knif " width={60} height={60}/>
+        <Image  src={"knife.svg"} alt="Knif " className="ml-4" width={60} height={60}/>
         </div>
      
         <p className={`${unbounded.className} text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
@@ -47,8 +47,8 @@ export default function Home() {
         </p>  
       
       </div>
-      <div   className="grid-item item2 h-[500px]  justify-end" draggable="false">
-        <Image className="cursor-pointer relative left-16" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
+      <div   className="grid-item item2 h-[500px]   justify-center items-center" draggable="false">
+        <Image className="" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
       </div> 
 
 

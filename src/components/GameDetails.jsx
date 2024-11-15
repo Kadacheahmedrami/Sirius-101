@@ -9,7 +9,7 @@ const GameDetails = ({ title  , mincraft}) => {
       <h2 className={` ${mincraft}  text-[38px]   lg:text-[56px] font-[400] text-[#61371F] leading-[56.88px] text-center mb-[1%] `}>
         {title}
       </h2>
-<Image src={"./build.svg"} alt='build' width={400} height={400}  />
+<Image src={"./build.svg"} alt='build ' className='hidden md:block ' width={400} height={400}  />
     </div>
   );
 };
