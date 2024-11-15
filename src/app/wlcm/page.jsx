@@ -3,7 +3,6 @@ import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
-import WelcomeGame from "../../components/WelcomeGame";
 import Script from "next/script";
 import NavBar from "../../components/NavBar";
 import localFont from "next/font/local";
@@ -20,24 +19,24 @@ const minecrafterAlt = localFont({
   style: 'normal' // Specify style if needed
 });
 export default function Home() {
-
+  
 
    return (
 <>  
         
-      <Script 
+      {/* <Script 
         type="module" 
         src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
         strategy="afterInteractive" // This loads the script after the page becomes interactive
-      />
+      /> */}
     <NavBar/>
-      <div className="grid-container border">
-      <div className=" grid-item item1 flex flex-col gap-[10px] justify-center items-center">
+      <div className="grid-container ">
+      <div className=" grid-item p-4 item1 flex flex-col gap-[10px] justify-center items-center">
         <p className={`${unbounded.className}  text-[24px] font-[700] text-[#5966F3]  leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full`}>
         Our upcoming event
         </p>
         <div className="flex flex-row items-center">
-        <h1 className={`text-[32px] md:text-[58px]  mr-4 font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
+        <h1 className={`text-[32px] md:text-[58px]   mx-4   font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
         SIRIUS 101 Workshops 
         </h1>
         <Image  src={"knife.svg"} alt="Knif " width={60} height={60}/>
@@ -45,15 +44,21 @@ export default function Home() {
      
         <p className={`${unbounded.className} text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
         Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you{ `'` }re a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Let’s embark on this exciting journey together and unlock the endless possibilities of IoT!
-        </p>
-
-
-     
+        </p>  
       
       </div>
-      <div   className="grid-item item2 h-[500px] justify-end" draggable="false">
+      <div   className="grid-item item2 h-[500px]  justify-end" draggable="false">
         <Image className="cursor-pointer relative left-16" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
       </div> 
+
+
+
+{/* Separator  */}
+      <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+<Image src={"./land_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+    </div>
+
+
         <div className="grid-item item5 flex flex-col gap-[15px]  border">
 
          <h2 className="text-[32px] md:text-[58px] font-[700] text-[#121212] leading-[56.88px] text-center md:text-start" >Why join Us?</h2>

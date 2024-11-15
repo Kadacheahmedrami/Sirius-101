@@ -339,7 +339,6 @@ grid-template-columns: 50% 50%;
 }
 
 .item3, .item4  , .item8 , .item9 , .details{
-  
   grid-column: 1 / 3; /* Full width containers */
 }
 .animate{
@@ -434,7 +433,7 @@ grid-template-columns: 50% 50%;
       margin-bottom: 20px;
     }
     .item6 , .item2{
-      display: none;
+
     }
 }
 
