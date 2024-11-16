@@ -32,6 +32,7 @@ export default function Home() {
         strategy="afterInteractive" // This loads the script after the page becomes interactive
       /> */}
     <NavBar/>
+    <Image className="hidden md:block mr-auto mb-[-7%] mt-[1%] ml-[6.5%]" src={'/enderdragon.svg'}  width={350} height={350} draggable="false" alt="Robot" />
       <div className="grid-container ">
 
   
@@ -39,11 +40,11 @@ export default function Home() {
         <p className={`${unbounded.className}  text-[24px] font-[700] text-[#5966F3]  leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full`}>
         Our upcoming event
         </p>
-        <div className="flex flex-row items-center">
-        <h1 className={`text-[32px] md:text-[58px]    ml-16 md:mx-4   font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
+        <div className="flex flex-row items-center justify-center w-full">
+        <h1 className={`text-[32px] md:text-[58px]    font-[700] text-[#121212] leading-[38.13px] md:leading-[56.88px] text-center md:text-start w-full ${minecrafterAlt.className}`}>
         SIRIUS 101 Workshops 
         </h1>
-        <Image  src={"knife.svg"} alt="Knif " className="ml-4" width={60} height={60}/>
+        <Image  src={"knife.svg"} alt="Knif " className="ml-4 hidden md:block" width={60} height={60}/>
         </div>
      
         <p className={`${unbounded.className} text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
@@ -58,8 +59,8 @@ export default function Home() {
         </a>
       </div>
       </div>
-      <div   className="grid-item item2 h-[500px]   justify-center items-center" draggable="false">
-        <Image className="" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
+      <div   className="grid-item item2  justify-center items-center" draggable="false">
+        <Image className="" src={'/sr101.svg'} width={800} height={800} draggable="false" alt="Robot" />
       </div> 
 
 
@@ -82,20 +83,20 @@ export default function Home() {
 
   <div className="flex flex-col justify-center gap-4 items-center md:items-start">
     <h1 className={`${minecrafterAlt.className} text-[32px] `}>What is SIRIUS?</h1>
-    <p className="text-[18px] max-w-[500px] md:max-w-[900px] ">
+    <p className="text-[18px] max-w-[500px] md:max-w-[900px] text-center md:text-start ">
     Sirius is a dynamic science club based in Amizour, Bejaia, formed by a group of passionate students from ESTIN. Our mission is to empower fellow students with the knowledge and skills needed to explore the world of hardware and technology. Whether you are just starting out or looking to deepen your understanding, Sirius provides hands-on learning experiences, workshops, and a collaborative community to help you grow. Join us and be part of a team that is all about creating, innovating, and learning together!
     </p>
     </div> 
 </div>
-<div className="flex flex-col items-center justify-center border details mt-8"> 
+<div className="flex flex-col items-center justify-center  details mt-8"> 
 
-<Image  alt="teammate" className="hidden lg:block" width={1200} height={800} src={"./clubteam.svg"}/>
+<Image  alt="teammate" className="hidden lg:block" width={1200} height={800} src={"./groupe.svg"}/>
 </div>
-
 
 <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
 <Image src={"./iron_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
     </div>
+
    
 
     <GameDetails 
@@ -223,10 +224,10 @@ export default function Home() {
           />
           
               </div>
-              <h2 className={` ${minecrafterAlt.className}  text-[38px] mr-auto  lg:text-[56px] font-[400] text-black  text-center`}>
+              {/* <h2 className={` ${minecrafterAlt.className}  text-[38px] mr-auto  lg:text-[56px] font-[400] text-black  text-center`}>
                 Our Mentors
                 </h2>
-              <div className="grid-item border pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
+              <div className="grid-item  pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
             
                 <div className="flex flex-col justify-center items-center gap-[20px] color-">
                 <Image alt="pic" src={'mentor.svg'} width={550} height={500}></Image>
@@ -253,18 +254,18 @@ export default function Home() {
                 </div>
 
 
-</div>
+</div> */}
               <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
 <Image src={"./tnt.svg"} alt='build' width={2900} className="mt-16" height={400}  />
 
     </div>
               <GameDetails 
         mincraft={minecrafterAlt.className}
-        title="previous events" 
+        title="Sponsors" 
           />  
 
 
-<div className="grid-item border pt-[20px]  flex-col md:flex-row item8 flex justify-center gap-[40px]">
+<div className="grid-item  pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
 <Image alt="pic" src={'gold.svg'} width={550} height={500}></Image>
 <Image alt="pic" src={'silver.svg'} width={550} height={500}></Image>
 </div>

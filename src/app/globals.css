@@ -121,6 +121,7 @@ body {
 
 
 body {
+  background-image: url(./../../public/back.svg);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;

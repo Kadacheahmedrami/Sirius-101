@@ -8,7 +8,7 @@ function Browncard({ src, title, paragraph, mincraft }) {
       <h1 className={` ${mincraft}  text-[26px] lg:text-[30px] font-bold leading-[28.44px] text-center text-[#666666] md:text-[#FFFFFF] mb-4`}>
         {title}
       </h1>
-      <p className='text-[16px] lg:text-[22px] font-bold leading-[30px] text-center text-[#666666] md:text-[#FFFFFF] opacity-80 w-[80%] '>
+      <p className='text-[36px] w-full mb-[50px]  lg:text-[36px] font-bold leading-[30px] text-center text-[#666666] md:text-[#FFFFFF] opacity-80  '>
         {paragraph}
       </p>
     </div>
