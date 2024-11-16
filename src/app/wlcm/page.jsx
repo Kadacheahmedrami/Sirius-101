@@ -33,6 +33,8 @@ export default function Home() {
       /> */}
     <NavBar/>
       <div className="grid-container ">
+     
+  
       <div className=" grid-item p-4 item1 flex flex-col gap-[10px] justify-center items-center">
         <p className={`${unbounded.className}  text-[24px] font-[700] text-[#5966F3]  leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full`}>
         Our upcoming event
@@ -61,35 +63,112 @@ export default function Home() {
     </div>
 
 
-        <div className="grid-item item5 flex flex-col gap-[15px]  border">
 
-         <h2 className="text-[32px] md:text-[58px] font-[700] text-[#121212] leading-[56.88px] text-center md:text-start" >Why join Us?</h2>
-         
-         <div className="h-[0px] "></div>
-         <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start"><Image height={40} width={40} src={'mynaui_star-solid.svg'}></Image>unique</h3>
-         <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start"> 
-         Engage in exciting projects that combine creativity and technology. As part of our IoT club, you’ll be working on innovative solutions that have real-world applications, from smart devices to connected environments. Stand out by being part of a forward-thinking community shaping the future. </p>
-
-       
-         <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'mdi_gear.svg'}></Image>Access to Cutting-Edge Technology</h3>
-         <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-         Get hands-on experience with the latest IoT tools, devices, and platforms. Whether {"you're"} building sensor networks or automating systems, you’ll have access to the best technology to bring your ideas to life and create impactful solutions in areas like smart cities, healthcare, and beyond.  </p>
-        
-       
-         <h3 className="flex flex-col md:flex-row gap-2 justify-start items-center text-[28px] font-[500] text-[#121212] leading-[32.88px] text-center md:text-start" ><Image height={40} width={40} src={'tabler_briefcase-filled.svg'}></Image>accomplished mentors</h3>
-         <p className="text-[22px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start">
-         Learn from experienced professionals in the field of IoT who will guide you every step of the way. Our mentors provide valuable insights and practical knowledge, ensuring you have the skills and understanding to excel in your projects and future career. </p>
-         
-        </div>
-        <div className="grid-item item6 border flex justify-end pr-[40px]">
-        <Image alt="pic" src={'phamily.svg'} width={650} height={500}></Image>
-        </div>
-
-  
-        <GameDetails 
+    <GameDetails 
         mincraft={minecrafterAlt.className}
         title="SIRIUS Club" 
-          />
+          />  
+
+<div className="flex relative flex-col md:flex-row items-center gap-8 details mt-8  justify-center ">
+  <Image alt="logo" src={"./sir.svg"} width={250} height={250}   /> 
+  <Image  src={"./fantom.svg"} alt="person" width={200} className="absolute hidden 2xl:block  right-[200px]  -top-[300px]" height={200} />
+
+  <div className="flex flex-col justify-center gap-4 items-center md:items-start">
+    <h1 className={`${minecrafterAlt.className} text-[32px] `}>What is SIRIUS?</h1>
+    <p className="text-[18px] max-w-[500px] md:max-w-[900px] ">
+    Sirius is a dynamic science club based in Amizour, Bejaia, formed by a group of passionate students from ESTIN. Our mission is to empower fellow students with the knowledge and skills needed to explore the world of hardware and technology. Whether you are just starting out or looking to deepen your understanding, Sirius provides hands-on learning experiences, workshops, and a collaborative community to help you grow. Join us and be part of a team that is all about creating, innovating, and learning together!
+    </p>
+    </div> 
+</div>
+<div className="flex flex-col items-center justify-center border details mt-8"> 
+
+<Image  alt="teammate" className="hidden lg:block" width={1200} height={800} src={"./clubteam.svg"}/>
+</div>
+
+
+<div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+<Image src={"./iron_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+    </div>
+   
+
+    <GameDetails 
+        mincraft={minecrafterAlt.className}
+        title="previous events" 
+          />  
+    {/* nasaspace */}
+<div className="flex relative flex-col md:flex-row justify-center items-center  my-16 px-8  details gap-4">
+ <Image  src={"./person.svg"} alt="person" width={40} className="absolute hidden xl:block -top-[77px] right-[400px]" height={200} />
+  <div   className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  " >
+
+  <h1 className={`${minecrafterAlt.className} text-[40px]   text-center  `}>
+  NASA SPACE APPS
+  </h1>
+  <p className="text-[18px] max-w-[650px]">
+  Sirius participated in the prestigious NASA Space Apps Challenge, a global competition where students and innovators create web and app solutions inspired by NASA’s space technologies. Our team was challenged to think outside the box, utilizing cutting-edge technology to develop ideas that could help solve real-world space-related problems. The event allowed us to connect with other passionate tech enthusiasts and demonstrate our ability to innovate under pressure.
+  </p>
+  </div>
+
+  <Image  src={"./nasaspace.svg"} width={500} height={500} alt="nasaspace"/>
+</div>
+{/* sirus101 */}
+<div className="flex relative flex-col md:flex-row-reverse justify-center  items-center  my-16 px-8  details gap-4">
+
+  <div  className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  ">
+
+  <h1 className={`${minecrafterAlt.className} text-[40px]   text-center  `}>
+  SIRIUS 101
+  </h1>
+  <p className="text-[18px] max-w-[650px]">
+  Our first Sirius 101 workshop was an exciting introduction to the world of IoT (Internet of Things). We designed the event to give participants a hands-on learning experience, breaking down complex concepts into simple, digestible lessons. From understanding basic hardware to developing IoT projects, the workshop provided valuable insights and practical skills, empowering students to kickstart their journey in the tech world
+  </p>
+  </div>
+  <Image  src={"./prv101.svg"} width={500} height={500} alt="prv101"/>
+
+
+</div>
+
+    {/* hackathon */}
+<div className="flex relative flex-col md:flex-row justify-center items-center  my-16 px-8  details gap-4">
+ <Image  src={"./person.svg"} alt="person" width={40} className="absolute hidden xl:block -top-[77px] right-[400px]" height={200} />
+  <div className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  ">
+
+  <h1 className={`${minecrafterAlt.className} text-[40px]     `}>
+  HACKATHON Bejaia
+  </h1>
+  <p className="text-[18px] max-w-[650px] ">
+  In collaboration with GDCS, we hosted the Hackathon Bejaia at Hotel Raya, a high-energy event bringing together tech enthusiasts and problem solvers. Teams competed in coding challenges that pushed their creativity and technical skills to the limit. This hackathon was a true celebration of teamwork and innovation, offering participants the opportunity to collaborate, learn, and showcase their skills in a competitive yet supportive environment.  </p>
+  </div>
+
+  <Image  src={"./hackathonbj.svg"} width={500} height={500} alt="hackthon"/>
+</div>
+
+{/* Sepa */}
+<div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+<Image src={"./sepa4.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+    </div>
+
+    <GameDetails 
+        mincraft={minecrafterAlt.className}
+        title="SIRIUS 101" 
+          />  
+
+
+
+<div className="flex relative flex-col md:flex-row-reverse justify-center   items-center  my-24 px-8  details gap-4">
+
+ <Image  src={"./ghast.svg"} alt="person" width={200} className="absolute hidden 2xl:block  right-[200px]  -top-[300px]" height={200} />
+  <div  className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  ">
+
+  <h1 className={`${minecrafterAlt.className} text-[40px]   text-center  `}>
+  What is SIRIUS 101?  </h1>
+  <p className="text-[18px] max-w-[650px]">
+  Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you are a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Lets embark on this exciting journey together and unlock the endless possibilities of IoT!
+  </p>
+  </div>
+  <Image  src={"./sr101.svg"} width={500} height={500} alt="prv101"/>
+
+
+</div>
               <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
           <Browncard 
              mincraft={minecrafterAlt.className}
