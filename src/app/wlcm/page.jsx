@@ -33,7 +33,7 @@ export default function Home() {
       /> */}
     <NavBar/>
       <div className="grid-container ">
-     
+
   
       <div className=" grid-item p-4 item1 flex flex-col gap-[10px] justify-center items-center">
         <p className={`${unbounded.className}  text-[24px] font-[700] text-[#5966F3]  leading-[28.13px] text-center md:text-start md:justify-start md:items-start w-full`}>
@@ -50,6 +50,13 @@ export default function Home() {
         Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you{ `'` }re a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Let’s embark on this exciting journey together and unlock the endless possibilities of IoT!
         </p>  
       
+      <div className="mx-auto md:mx-0">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz-wuoV_g-uWGHr81d4SNCNujBTNhYCNShXsNYPPxt4v8k6g/viewform" className="mx-auto">
+          <button className="cool-button  md:w-[790px] h-[74px] my-5 ">
+            Register Now
+          </button>
+        </a>
+      </div>
       </div>
       <div   className="grid-item item2 h-[500px]   justify-center items-center" draggable="false">
         <Image className="" src={'/sr101.svg'} width={1000} height={1000} draggable="false" alt="Robot" />
@@ -174,7 +181,7 @@ export default function Home() {
              mincraft={minecrafterAlt.className}
             src="call.svg" 
             title="Date" 
-            paragraph={"Date: 21st /22th NOV "} 
+            paragraph={"Date: 22st /23th NOV "} 
           />
           <Browncard 
              mincraft={minecrafterAlt.className}
@@ -189,7 +196,7 @@ export default function Home() {
           <Thiccard
              mincraft={minecrafterAlt.className}
             src="params.svg" 
-            title="The Objective of the Game" 
+            title="requirement" 
             paragraph={"All you need is a curiosity for technology and a willingness to learn! Whether you're a beginner or have some experience, Sirius 101 is perfect for anyone eager to explore the world of IoT and hardware. Just bring your enthusiasm and an open mind!"}  />
       
           
