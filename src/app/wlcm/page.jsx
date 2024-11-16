@@ -3,6 +3,8 @@ import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
 import Footer from "../../components/Footer"
 import Card from "../../components/Card"
+import Thiccard from "../../components/Thiccard"
+import Browncard from "../../components/Browncard"
 import Script from "next/script";
 import NavBar from "../../components/NavBar";
 import localFont from "next/font/local";
@@ -88,31 +90,97 @@ export default function Home() {
         mincraft={minecrafterAlt.className}
         title="SIRIUS Club" 
           />
+              <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
+          <Browncard 
+             mincraft={minecrafterAlt.className}
+            src="call.svg" 
+            title="Date" 
+            paragraph={"Date: 21st /22th NOV "} 
+          />
+          <Browncard 
+             mincraft={minecrafterAlt.className}
+            src="poss.svg" 
+            title="Place" 
+            paragraph={"ESTIN AMIZOUR"} 
+          />
+       
+          
+              </div>
+              <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
+          <Thiccard
+             mincraft={minecrafterAlt.className}
+            src="params.svg" 
+            title="The Objective of the Game" 
+            paragraph={"All you need is a curiosity for technology and a willingness to learn! Whether you're a beginner or have some experience, Sirius 101 is perfect for anyone eager to explore the world of IoT and hardware. Just bring your enthusiasm and an open mind!"}  />
+      
+          
+              </div>
+                        <h2 className={` ${minecrafterAlt.className}  text-[38px] mr-auto  lg:text-[56px] font-[400] text-black  text-center`}>
+                What will you learn
+                </h2>
           <div className="grid-item item7 flex flex-col lg:flex-row justify-center items-center ">
           <Card 
+          
             src="arrow.svg" 
-            title="The Objective of the Game" 
-            paragraph={"The goal is to be the first to find one of six hidden cards on campus. Solve quizzes to unlock hints about each card’s location. Only the quickest players will qualify for the final game, with chances to win exciting IoT-related prizes. "} 
+            title="IoT Basics" 
+            paragraph={"At Sirius 101, you'll dive into the fundamentals of the Internet of Things (IoT). Learn how everyday objects can be connected and controlled through the internet, giving you the foundation to build your own IoT projects. From sensors to communication protocols, you'll gain essential knowledge to start creating smart devices."} 
           />
           <Card 
             src="prize.svg" 
-            title="Win Many Prizes" 
-            paragraph={"Players who find the hidden cards will qualify for the final game. In this stage, winners stand a chance to win exciting prizes that will enhance their IoT careers. These prizes are designed to give you hands-on experience with IoT technologies and make you stand out in the field."} 
+            title="Hardware Skills" 
+            paragraph={"Get hands-on with hardware at Sirius 101! We ll teach you how to work with microcontrollers, sensors, and actuators. You ll learn how to design and build your own circuits, gaining the technical skills necessary to bring your ideas to life through physical devices."} 
           />
           <Card 
             src="time.svg" 
-            title="The Period of the Game" 
-            paragraph={"The game starts on 21 October and ends on 22 October. During this period, players must solve the quizzes, find the hidden cards, and qualify for the final game. Keep your mind sharp and act fast to increase your chances of winning."} 
+            title="Programming for IoT" 
+            paragraph={"At Sirius 101, programming is key. You will learn how to write code to control IoT devices, using popular languages like Python and C++. We ll guide you through the process of integrating software with hardware, ensuring you understand how to make your devices come alive and communicate effectively."} 
           />
+          
               </div>
+              <h2 className={` ${minecrafterAlt.className}  text-[38px] mr-auto  lg:text-[56px] font-[400] text-black  text-center`}>
+                Our Mentors
+                </h2>
+              <div className="grid-item border pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
+            
+                <div className="flex flex-col justify-center items-center gap-[20px] color-">
+                <Image alt="pic" src={'mentor.svg'} width={550} height={500}></Image>
+                <h2 className={` ${minecrafterAlt.className}  text-[38px]   lg:text-[56px] font-[400] text-black  text-center`}>
+               Youcef
+                </h2>
+                <Image alt="pic" src={'men.svg'} width={150} height={500}></Image>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-[20px]">
+                <Image alt="pic" src={'mentor.svg'} width={550} height={500}></Image>
+                <h2 className={` ${minecrafterAlt.className}  text-[38px]   lg:text-[56px] font-[400] text-black  text-center`}>
+                Amine
+                </h2>
+                <Image alt="pic" src={'steve.svg'} width={150} height={500}></Image>
+
+                </div>
+                <div className="flex flex-col justify-center items-center gap-[20px]">
+                <Image alt="pic" src={'mentor.svg'} width={550} height={500}></Image>
+                <h2 className={` ${minecrafterAlt.className}  text-[38px]   lg:text-[56px] font-[400] text-black  text-center`}>
+                Zineb
+                </h2>
+                <Image alt="pic" src={'zineb.svg'} width={150} height={500}></Image>
+
+                </div>
+
+
+</div>
+              <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+<Image src={"./tnt.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+
+    </div>
               <GameDetails 
         mincraft={minecrafterAlt.className}
         title="previous events" 
           />  
 
 
-<div className="grid-item border bg-red-400  item8 flex justify-center">
-
+<div className="grid-item border pt-[20px]  flex-col md:flex-row item8 flex justify-center gap-[40px]">
+<Image alt="pic" src={'gold.svg'} width={550} height={500}></Image>
+<Image alt="pic" src={'silver.svg'} width={550} height={500}></Image>
 </div>
 
 
