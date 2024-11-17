@@ -30,9 +30,9 @@ export default function Home() {
 <>  
            <Head>
         <title>Bejaia IoT: Innovating the Future of Connectivity</title>
-        <meta name="description" content="Explore Bejaia's advancements in IoT technology and robotics, leading the way in digital transformation in Algeria." />
-        <meta property="og:title" content="Bejaia IoT: Innovating the Future of Connectivity" />
-        <meta property="og:description" content="Discover how Bejaia is becoming a hub for IoT and Robotics innovation in Algeria." />
+        <meta name="description" content="sirius 101" />
+        <meta property="og:title" content="sirius 101" />
+        <meta property="og:description" content="sirius 101" />
       </Head>
       {/* <Script 
         type="module" 
