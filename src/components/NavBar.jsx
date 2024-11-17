@@ -4,7 +4,7 @@ import React from 'react'
 function NavBar() {
   return (
     <nav className="navbar">
-    <div className="logo mx-auto" draggable="false">
+    <div className="logo mx-auto md:mx-0"  draggable="false">
       <a href='/wlcm' className='flex justify-center items-center gap-2'>
       <Image src={"/logo101.svg"} className="" height={150} width={150} alt="logo" />
       </a>
