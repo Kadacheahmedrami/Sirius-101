@@ -1,3 +1,4 @@
+import Head from 'next/head';  // <-- This is required
 
 import Image from "next/image";
 import GameDetails from '../../components/GameDetails';
@@ -24,8 +25,15 @@ export default function Home() {
   
 
    return (
+
+    
 <>  
-        
+           <Head>
+        <title>Bejaia IoT: Innovating the Future of Connectivity</title>
+        <meta name="description" content="Explore Bejaia's advancements in IoT technology and robotics, leading the way in digital transformation in Algeria." />
+        <meta property="og:title" content="Bejaia IoT: Innovating the Future of Connectivity" />
+        <meta property="og:description" content="Discover how Bejaia is becoming a hub for IoT and Robotics innovation in Algeria." />
+      </Head>
       {/* <Script 
         type="module" 
         src="https://unpkg.com/@splinetool/viewer@1.9.31/build/spline-viewer.js" 
@@ -60,7 +68,7 @@ export default function Home() {
       </div>
       </div>
       <div   className="grid-item item2  justify-center items-center" draggable="false">
-        <Image className="" src={'/sr101.svg'} width={800} height={800} draggable="false" alt="Robot" />
+        <Image className="" src={'/big.svg'} width={800} height={800} draggable="false" alt="Robot" />
       </div> 
 
 
