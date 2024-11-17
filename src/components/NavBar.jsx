@@ -4,7 +4,7 @@ import React from 'react'
 function NavBar() {
   return (
     <nav className="navbar">
-    <div className="logo" draggable="false">
+    <div className="logo mx-auto" draggable="false">
       <a href='/wlcm' className='flex justify-center items-center gap-2'>
       <Image src={"/logo101.svg"} className="" height={150} width={150} alt="logo" />
       </a>
@@ -12,17 +12,13 @@ function NavBar() {
     </div>
     <ul className="nav-links">
     <li><a className='linea'  href="#Details">SIRIUS Club</a></li>
-      <li><a className='linea'  href="#Details">Previous Events</a></li>
-      <li><a className='linea'  href="#Details">SIRIUS 101</a></li>
-      <li><a className='linea'  href="#Details">Sponsors</a></li>
+      <li><a className='linea'  href="#prev">Previous Events</a></li>
+      <li><a className='linea'  href="#101">SIRIUS 101</a></li>
+      <li><a className='linea'  href="#spon">Sponsors</a></li>
 
    
     </ul>
-    <div className="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+ 
   </nav>
   )
 }

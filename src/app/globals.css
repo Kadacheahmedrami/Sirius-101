@@ -271,19 +271,19 @@ img
   width: 100%;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
 
-.hamburger span {
-  width: 30px;
-  height: 3px;
-  background-color:  #000000;
-  margin: 5px 0;
-  transition: transform 0.3s ease;
-}
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color:  #000000;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+  }
 
 .button{
   cursor: pointer;
@@ -600,3 +600,4 @@ grid-template-columns: 50% 50%;
 .image-container img:hover {
   transform: rotateY(360deg); /* Rotate around the Y-axis */
 }
+

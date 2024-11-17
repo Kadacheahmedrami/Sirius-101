@@ -47,7 +47,7 @@ export default function Home() {
         <Image  src={"knife.svg"} alt="Knif " className="ml-4 hidden md:block" width={60} height={60}/>
         </div>
      
-        <p className={`${unbounded.className} text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
+        <p className={`${unbounded.className} px-2 text-[20px] font-[400] text-[#000000] text-opacity-60 leading-[28.13px] text-center md:text-start `}>
         Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you{ `'` }re a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Let’s embark on this exciting journey together and unlock the endless possibilities of IoT!
         </p>  
       
@@ -66,8 +66,8 @@ export default function Home() {
 
 
 {/* Separator  */}
-      <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
-<Image src={"./land_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+      <div  className="grid-item  details flex flex-col justify-end items-center">
+<Image src={"./land_sepa.svg"}  alt='build' width={2900} className="mt-16" height={400}  />
     </div>
 
 
@@ -81,8 +81,8 @@ export default function Home() {
   <Image alt="logo" src={"./sir.svg"} width={250} height={250}   /> 
   <Image  src={"./fantom.svg"} alt="person" width={200} className="absolute hidden 2xl:block  right-[200px]  -top-[300px]" height={200} />
 
-  <div className="flex flex-col justify-center gap-4 items-center md:items-start">
-    <h1 className={`${minecrafterAlt.className} text-[32px] `}>What is SIRIUS?</h1>
+  <div  className="flex flex-col justify-center gap-4 items-center md:items-start">
+    <h1  className={`${minecrafterAlt.className} text-[32px] `}>What is SIRIUS?</h1>
     <p className="text-[18px] max-w-[500px] md:max-w-[900px] text-center md:text-start ">
     Sirius is a dynamic science club based in Amizour, Bejaia, formed by a group of passionate students from ESTIN. Our mission is to empower fellow students with the knowledge and skills needed to explore the world of hardware and technology. Whether you are just starting out or looking to deepen your understanding, Sirius provides hands-on learning experiences, workshops, and a collaborative community to help you grow. Join us and be part of a team that is all about creating, innovating, and learning together!
     </p>
@@ -90,21 +90,22 @@ export default function Home() {
 </div>
 <div className="flex flex-col items-center justify-center  details mt-8"> 
 
-<Image  alt="teammate" className="hidden lg:block" width={1200} height={800} src={"./groupe.svg"}/>
+<Image   alt="teammate" className="hidden lg:block" width={1200} height={800} src={"./groupe.svg"}/>
 </div>
 
-<div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
-<Image src={"./iron_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
+<div   className="grid-item  details flex flex-col justify-end items-center">
+<Image   src={"./iron_sepa.svg"} alt='build' width={2900} className="mt-16" height={400}  />
     </div>
 
    
 
     <GameDetails 
+    
         mincraft={minecrafterAlt.className}
         title="previous events" 
           />  
     {/* nasaspace */}
-<div className="flex relative flex-col md:flex-row justify-center items-center  my-16 px-8  details gap-4">
+<div  className="flex relative flex-col md:flex-row justify-center items-center  my-16 px-8  details gap-4">
  <Image  src={"./person.svg"} alt="person" width={40} className="absolute hidden xl:block -top-[77px] right-[400px]" height={200} />
   <div   className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  " >
 
@@ -116,7 +117,7 @@ export default function Home() {
   </p>
   </div>
 
-  <Image  src={"./nasaspace.svg"} width={500} height={500} alt="nasaspace"/>
+  <Image  id='prev' src={"./nasaspace.svg"} width={500} height={500} alt="nasaspace"/>
 </div>
 {/* sirus101 */}
 <div className="flex relative flex-col md:flex-row-reverse justify-center  items-center  my-16 px-8  details gap-4">
@@ -130,7 +131,7 @@ export default function Home() {
   Our first Sirius 101 workshop was an exciting introduction to the world of IoT (Internet of Things). We designed the event to give participants a hands-on learning experience, breaking down complex concepts into simple, digestible lessons. From understanding basic hardware to developing IoT projects, the workshop provided valuable insights and practical skills, empowering students to kickstart their journey in the tech world
   </p>
   </div>
-  <Image  src={"./prv101.svg"} width={500} height={500} alt="prv101"/>
+  <Image src={"./prv101.svg"} width={500} height={500} alt="prv101"/>
 
 
 </div>
@@ -151,7 +152,7 @@ export default function Home() {
 </div>
 
 {/* Sepa */}
-<div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+<div  className="grid-item  details flex flex-col justify-end items-center">
 <Image src={"./sepa4.svg"} alt='build' width={2900} className="mt-16" height={400}  />
     </div>
 
@@ -167,7 +168,7 @@ export default function Home() {
  <Image  src={"./ghast.svg"} alt="person" width={200} className="absolute hidden 2xl:block  right-[200px]  -top-[300px]" height={200} />
   <div  className="flex flex-col justify-center items-center md:items-start text-center   md:text-start  ">
 
-  <h1 className={`${minecrafterAlt.className} text-[40px]   text-center  `}>
+  <h1 id="101" className={`${minecrafterAlt.className} text-[40px]   text-center  `}>
   What is SIRIUS 101?  </h1>
   <p className="text-[18px] max-w-[650px]">
   Sirius 101 is your gateway to exploring the world of Internet of Things (IoT) from the ground up. Whether you are a complete beginner or looking to refresh your knowledge, this workshop covers everything you need to know to get started with IoT technology. Join us as we break down complex concepts into simple, hands-on experiences, all while providing the tools and insights necessary to build your own IoT projects. Lets embark on this exciting journey together and unlock the endless possibilities of IoT!
@@ -255,7 +256,7 @@ export default function Home() {
 
 
 </div> */}
-              <div  id="Details" className="grid-item  details flex flex-col justify-end items-center">
+              <div className="grid-item  details flex flex-col justify-end items-center">
 <Image src={"./tnt.svg"} alt='build' width={2900} className="mt-16" height={400}  />
 
     </div>
@@ -265,8 +266,8 @@ export default function Home() {
           />  
 
 
-<div className="grid-item  pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
-<Image alt="pic" src={'gold.svg'} width={550} height={500}></Image>
+<div id="spon" className="grid-item  pt-[20px] flex-col md:flex-row item8 flex justify-center gap-[40px]">
+<Image  alt="pic" src={'gold.svg'} width={550} height={500}></Image>
 <Image alt="pic" src={'silver.svg'} width={550} height={500}></Image>
 </div>
 
